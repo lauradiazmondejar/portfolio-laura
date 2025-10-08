@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+ï»¿import { motion } from "framer-motion";
 import "./Origina.css";
 
 export default function Origina() {
@@ -17,14 +17,13 @@ export default function Origina() {
 
           <div className="origina-intro">
             <div className="origina-text">
-              <h2 className="origina-title">Origina — Sobre mí</h2>
+              <h2 className="origina-title">Origina â€” Sobre mÃ­</h2>
               <p className="origina-subtitle">
-                Soy Laura Díaz Mondéjar (24/08/2004), de Miguelturra. Estudiante de último año
-                del Grado en Ingeniería Informática en la Escuela Superior de Informática de
-                Ciudad Real. Me apasiona crear interfaces vivas y cuidadas, donde diseño y
-                código trabajan juntos.
+                Soy Laura DÃ­az MondÃ©jar (24/08/2004), de Miguelturra. Estudiante de Ãºltimo aÃ±o
+                del Grado en IngenierÃ­a InformÃ¡tica en la Escuela Superior de InformÃ¡tica de
+                Ciudad Real. Pertenezco a la intensificaciÃ³n en TecnologÃ­as de la InformaciÃ³n.
                 <br />
-                <em className="origina-motto">En este planeta empieza todo: aquí arranca mi universo digital, el Sistema Lauralis.</em>
+                <em className="origina-motto">En este planeta empieza todo: aquÃ­ arranca mi universo digital, el Sistema Lauralis.</em>
               </p>
 
               <div className="origina-contact">
@@ -49,7 +48,7 @@ export default function Origina() {
 
             <img
               src={`${import.meta.env.BASE_URL}laura-vertical.jpeg`}
-              alt="Laura Díaz Mondéjar"
+              alt="Laura Dï¿½az Mondï¿½jar"
               className="origina-photo"
               loading="lazy"
             />
