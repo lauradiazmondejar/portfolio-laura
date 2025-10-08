@@ -39,7 +39,7 @@ export default function App() {
       >
         {/* ðŸª© Imagen redonda */}
         <motion.img
-          src="/laura.jpeg"
+          src={`${import.meta.env.BASE_URL}laura.jpeg`}
           alt="Laura DÃ­az"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

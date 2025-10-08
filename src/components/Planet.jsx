@@ -30,7 +30,10 @@ export default function Planeta({
   }, [name]);
 
   // ✅ las texturas deben estar en public/textures/
-  const colorMap = useLoader(THREE.TextureLoader, `/textures/${textureName}`);
+  const colorMap = useLoader(
+    THREE.TextureLoader,
+    `${import.meta.env.BASE_URL}textures/${textureName}`
+  );
 
   // Movimiento orbital
   useFrame(({ clock }) => {

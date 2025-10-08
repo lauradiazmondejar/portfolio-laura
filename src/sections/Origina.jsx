@@ -1,4 +1,4 @@
-ï»¿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "./Origina.css";
 
 export default function Origina() {
@@ -17,14 +17,14 @@ export default function Origina() {
 
           <div className="origina-intro">
             <div className="origina-text">
-              <h2 className="origina-title">Origina â€” Sobre mÃ­</h2>
+              <h2 className="origina-title">Origina — Sobre mí</h2>
               <p className="origina-subtitle">
-                Soy Laura DÃ­az MondÃ©jar (24/08/2004), de Miguelturra. Estudiante de Ãºltimo aÃ±o
-                del Grado en IngenierÃ­a InformÃ¡tica en la Escuela Superior de InformÃ¡tica de
-                Ciudad Real. Me apasiona crear interfaces vivas y cuidadas, donde diseÃ±o y
-                cÃ³digo trabajan juntos.
+                Soy Laura Díaz Mondéjar (24/08/2004), de Miguelturra. Estudiante de último año
+                del Grado en Ingeniería Informática en la Escuela Superior de Informática de
+                Ciudad Real. Me apasiona crear interfaces vivas y cuidadas, donde diseño y
+                código trabajan juntos.
                 <br />
-                <em className="origina-motto">En este planeta empieza todo: aquÃ­ arranca mi universo digital, el Sistema Lauralis.</em>
+                <em className="origina-motto">En este planeta empieza todo: aquí arranca mi universo digital, el Sistema Lauralis.</em>
               </p>
 
               <div className="origina-contact">
@@ -43,13 +43,13 @@ export default function Origina() {
                   </svg>
                   <span>LinkedIn</span>
                 </a>
-                <a className="cv-btn" href="/cv.pdf" target="_blank" rel="noopener noreferrer">Ver CV</a>
+                <a className="cv-btn" href={`${import.meta.env.BASE_URL}cv.pdf`} target="_blank" rel="noopener noreferrer">Ver CV</a>
               </div>
             </div>
 
             <img
-              src="/laura-vertical.jpeg"
-              alt="Laura DÃ­az MondÃ©jar"
+              src={`${import.meta.env.BASE_URL}laura-vertical.jpeg`}
+              alt="Laura Díaz Mondéjar"
               className="origina-photo"
               loading="lazy"
             />
@@ -63,3 +63,4 @@ export default function Origina() {
     </section>
   );
 }
+
