@@ -37,7 +37,8 @@
     "orbit": 4.5,
     "material": "holographic",
     "metalness": 0.3,
-    "roughness": 0.4
+    "roughness": 0.4,
+    "info": "Lenguajes y tecnologías"
   },
   {
     "name": "Synthia",
@@ -46,7 +47,8 @@
     "orbit": 6,
     "material": "gas",
     "metalness": 0.2,
-    "roughness": 0.3
+    "roughness": 0.3,
+    "info": "Proyectos"
   },
   {
     "name": "Nova",

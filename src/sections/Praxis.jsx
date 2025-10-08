@@ -5,19 +5,21 @@ export default function Praxis() {
   const items = [
     {
       period: "sep 2024 — may 2025",
-      title: "Becaria de colaboración — Programas Mentor (Clásico y Profesional)",
-      place: "Escuela Superior de Informática (UCLM) · Ciudad Real",
+      title: "Becaria de colaboración — Escuela Superior de Informática (UCLM)",
+      place: "Beca de colaboración en la gestión y desarrollo de los Programas Mentor Clásico y Mentor Profesional de la Escuela Superior de Informática de Ciudad Real.",
       details:
-        "Apoyo a alumnado de nuevo ingreso, tutorías técnicas y acompañamiento académico.",
+        "Mis funciones principales fueron la gestión de los programas, la organización de eventos y la comunicación con estudiantes y mentores.",
+      skills: ["Microsoft Excel", "Gestión de programas"],
     },
     {
       period: "sep 2025 — nov 2025",
       title:
-        "Prácticas extracurriculares de Ingeniería Informática — LULLAX SL",
+        "Estudiante en prácticas — LULLAX SL",
       place:
-        "Programa de Retención de Talento · Ciudad Real 2025",
+        "Prácticas extracurriculares del Grado en Ingeniería Informática.",
       details:
-        "Colaboración en desarrollo frontend, prototipado y soporte a producto.",
+        "Fui beneficiaria del Programa de Retención de Talento Ciudad Real 2025. Realicé prácticas en LULLAX SL como estudiante en prácticas, ayudando a mejorar la página web de la empresa y optimizando los marketplaces en los que se encuentran sus productos.",
+      skills: ["WordPress", "Bases de datos", "Marketplaces", "Control de versiones", "Comercio eletrónico"],
     },
   ];
 
@@ -55,6 +57,13 @@ export default function Praxis() {
                   <h3 className="title">{it.title}</h3>
                   <div className="place">{it.place}</div>
                   <p className="details">{it.details}</p>
+                  {it.skills && (
+                    <ul className="tags" aria-label="Aptitudes">
+                      {it.skills.map((s, si) => (
+                        <li key={si} className="tag">{s}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </motion.li>
             ))}

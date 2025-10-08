@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Origina from "./sections/Origina";
 import Logika from "./sections/Logika";
 import Praxis from "./sections/Praxis";
+import Kodia from "./sections/Kodia";
 
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
@@ -73,7 +74,7 @@ export default function App() {
             whiteSpace: "nowrap",
           }}
         >
-          Bienvenido/a a mi portfolio:{" "}
+          Bienvenido/a a {" "}
           <span
             style={{
               color: "#ffd6f6",
@@ -116,6 +117,7 @@ export default function App() {
         <Origina />
         <Logika />
         <Praxis />
+        <Kodia />
         {/* SecciÃ³n de los planetas */}
         <section id="OriginaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Origina: Sobre mÃ­</h2>
@@ -127,7 +129,7 @@ export default function App() {
           <p>InformaciÃ³n sobre el planeta Logika...</p>
         </section>
 
-        <section id="Kodia" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
+        <section id="KodiaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Kodia: Proyectos y cÃ³digo</h2>
           <p>InformaciÃ³n sobre el planeta Kodia...</p>
         </section>
@@ -155,6 +157,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 

@@ -1,0 +1,46 @@
+.kodia-section {
+  --accent: #00c8d7;
+  --accent-soft: rgba(0, 200, 215, 0.15);
+  --panel: rgba(255,255,255,0.04);
+  position: relative; isolation: isolate; overflow: hidden;
+  background: radial-gradient(1100px 600px at 80% -10%, var(--accent-soft), transparent 60%),
+              linear-gradient(180deg, #151822 0%, #0b0d17 100%);
+  border-radius: 12px; padding: 48px 20px;
+}
+.kodia-container { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+.kodia-header { text-align: left; }
+.kodia-chip { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.4px; color:var(--accent); background: var(--accent-soft); border:1px solid rgba(0,200,215,.35); }
+.kodia-title { margin:10px 0 6px; font-weight:600; font-size:28px; color:#f5f5f5; }
+.kodia-title::after { content:""; display:block; width:72px; height:2px; margin-top:8px; background: linear-gradient(90deg, var(--accent), transparent); opacity:.6; }
+.kodia-subtitle { margin:0 0 12px; color:#ccd0d7; }
+.kodia-divider { height:1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity:.45; border-radius:999px; }
+
+.kodia-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:22px; }
+.kodia-card { background: var(--panel); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; box-shadow: 0 6px 22px rgba(0,0,0,0.28); }
+.kodia-card h3 { margin:0 0 8px; color:#eaf9fb; font-weight:600; }
+
+/* Badges */
+.kd-badges { display:flex; flex-wrap:wrap; gap:8px; }
+.kd-badge { display:inline-flex; align-items:center; justify-content:center; padding:6px 10px; border-radius:999px; font-weight:600; font-size:12px; backdrop-filter: blur(2px); border:1px solid rgba(255,255,255,0.08); }
+
+/* Tools */
+.kd-tools { display:flex; gap:12px; flex-wrap:wrap; }
+.kd-tool-link { text-decoration:none; color:#e6f7f9; }
+.kd-tool { display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; background: rgba(255,255,255,0.03); }
+.kd-tool .icon { display:grid; place-items:center; width:28px; height:28px; border-radius:8px; background: rgba(0,200,215,0.14); border:1px solid rgba(0,200,215,0.35); }
+.kd-tool .txt { font-weight:500; }
+
+/* Projects */
+.kd-projects { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.kd-project { border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:10px 12px; background: rgba(255,255,255,0.03); }
+.kd-project .kp-title { color:#eaf9fb; font-weight:600; }
+.kd-project .kp-desc { color:#d0e9ed; font-size:14px; margin:4px 0 6px; }
+.kd-project .kp-link { color:#a8f6ff; text-decoration:none; border-bottom:1px dashed rgba(168,246,255,0.55); }
+.kd-project .kp-link:hover { color:#e6ffff; border-bottom-color:#e6ffff; }
+
+/* Background */
+.kodia-aurora { position:absolute; right:-12%; top:-8%; width:140%; height:120%; background: radial-gradient(60% 50% at 82% 8%, rgba(0,200,215,0.08), transparent 60%), conic-gradient(from 200deg at 20% 20%, rgba(0,200,215,0.06), transparent 30%); transform: rotate(2deg); filter: blur(6px); pointer-events:none; z-index:0; }
+.kodia-stars { position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.38; background-image: radial-gradient(1px 1px at 14% 18%, rgba(255,255,255,0.32) 50%, transparent 51%), radial-gradient(1px 1px at 86% 26%, rgba(255,255,255,0.28) 50%, transparent 51%), radial-gradient(1px 1px at 28% 68%, rgba(255,255,255,0.22) 50%, transparent 51%), radial-gradient(1px 1px at 60% 52%, rgba(255,255,255,0.22) 50%, transparent 51%); }
+
+@media (max-width: 920px) { .kodia-grid { grid-template-columns: 1fr; } }
+
