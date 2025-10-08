@@ -8,6 +8,7 @@ export default function Planeta({
   size,
   orbit,
   info,
+  onClick,
   onHover,
   onLeave,
 }) {
@@ -46,6 +47,7 @@ export default function Planeta({
   return (
     <mesh
       ref={ref}
+      onClick={() => { if (onClick) onClick({ name, color, info }); }}
       onPointerOver={() => {
         setHovered(true);
         onHover({ name, color, info });  // Pasamos la información completa al tooltip

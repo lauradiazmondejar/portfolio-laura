@@ -14,16 +14,17 @@
     "name": "Logika",
     "color": "#3b82f6",
     "size": 0.9,
-    "orbit": 3,
+    "orbit": 1.5,
     "material": "metal",
     "metalness": 1.0,
-    "roughness": 0.1
+    "roughness": 0.1,
+    "info": "Formación"
   },
   {
     "name": "Kodia",
     "color": "#00c8d7",
     "size": 1.1,
-    "orbit": 4.5,
+    "orbit": 3,
     "material": "holographic",
     "metalness": 0.3,
     "roughness": 0.4
@@ -32,7 +33,7 @@
     "name": "Praxis",
     "color": "#c08457",
     "size": 1.0,
-    "orbit": 6,
+    "orbit": 4.5,
     "material": "rock",
     "metalness": 0.1,
     "roughness": 0.9
@@ -41,7 +42,7 @@
     "name": "Synthia",
     "color": "#a87fd1",
     "size": 1.2,
-    "orbit": 7.5,
+    "orbit": 6,
     "material": "gas",
     "metalness": 0.2,
     "roughness": 0.3
@@ -50,7 +51,7 @@
     "name": "Nova",
     "color": "#9d6ff2",
     "size": 1.3,
-    "orbit": 9,
+    "orbit": 7.5,
     "material": "crystal",
     "metalness": 0.4,
     "roughness": 0.05
@@ -59,7 +60,7 @@
     "name": "Cirrus",
     "color": "#f0f0f0",
     "size": 0.7,
-    "orbit": 2,
+    "orbit": 9,
     "material": "pearl",
     "metalness": 0.2,
     "roughness": 0.5

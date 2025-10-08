@@ -1,0 +1,146 @@
+.logika-section {
+  --accent: #3b82f6; /* azul Logika */
+  --accent-soft: rgba(59, 130, 246, 0.12);
+  --accent-strong: rgba(59, 130, 246, 0.5);
+  --panel: rgba(255,255,255,0.04);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: radial-gradient(1100px 600px at 85% -10%, var(--accent-soft), transparent 60%),
+              /* Alineamos el degradado base con Origina */
+              linear-gradient(180deg, #151822 0%, #0b0d17 100%);
+  /* Redondeo sólo abajo para que encaje con la sección anterior */
+  border-radius: 0 0 12px 12px;
+  /* Eliminar cualquier separación perceptible en el borde superior */
+  margin-top: 0;
+  padding: 48px 20px;
+}
+
+/* Grid técnico sutil sobre el fondo */
+.logika-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(59,130,246,0.015) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(59,130,246,0.01) 0 1px, transparent 1px 24px);
+  mask-image: radial-gradient(60% 50% at 50% 10%, #000 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.logika-container { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+.logika-header { text-align: left; }
+
+.logika-chip {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(59,130,246,0.35);
+}
+
+.logika-title {
+  margin: 10px 0 6px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #f5f5f5;
+}
+.logika-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0.6;
+}
+
+.logika-subtitle { margin: 0 0 12px; color: #ccd0d7; }
+.logika-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.45; border-radius: 999px; }
+
+/* Timeline */
+.timeline { position: relative; margin-top: 22px; }
+.timeline-line {
+  position: absolute; left: 16px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.35) 50%, rgba(59,130,246,0) 100%);
+  background-size: 100% 200%;
+  animation: logika-scan 6s linear infinite;
+}
+.timeline-list { list-style: none; margin: 0; padding: 0 0 0 48px; }
+.timeline-item { position: relative; padding: 10px 12px 16px; border-left: 1px dashed rgba(255,255,255,0.06); margin-left: -1px; }
+.timeline-item .dot {
+  position: absolute; left: -37px; top: 14px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 2px rgba(59,130,246,0.28), 0 0 12px rgba(59,130,246,0.35);
+}
+.timeline-item .dot::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.35;
+  animation: dot-ping 3.6s ease-out infinite;
+}
+.timeline-item .content { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 14px; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.timeline-item:hover .content { border-color: var(--accent-strong); box-shadow: 0 0 0 2px rgba(59,130,246,0.10), 0 6px 22px rgba(0,0,0,0.3); transform: translateY(-0.5px); }
+.timeline-item .period { color: var(--accent); font-weight: 600; font-size: 12px; letter-spacing: 0.3px; margin-bottom: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.timeline-item .title { margin: 0; color: #eef2ff; font-size: 18px; font-weight: 600; letter-spacing: .2px; }
+.timeline-item .title::before { content: "<"; color: rgba(255,255,255,0.35); margin-right: 4px; }
+.timeline-item .title::after { content: "/>"; color: rgba(255,255,255,0.35); margin-left: 4px; }
+.timeline-item .place { margin: 4px 0 6px; color: #d0d7e3; font-size: 14px; }
+.timeline-item .details { margin: 0; color: #e6ebf3; font-size: 14px; opacity: 0.9; }
+
+/* Alternar ligera posición para sensación de zig-zag */
+.timeline-item:nth-child(even) .content { transform-origin: left center; }
+.timeline-item:nth-child(odd) .content { transform-origin: left center; }
+
+/* Background ornaments */
+.logika-aurora {
+  position: absolute; left: -10%; top: -8%; width: 140%; height: 120%;
+  background: radial-gradient(60% 50% at 78% 12%, rgba(59,130,246,0.08), transparent 60%),
+              conic-gradient(from 200deg at 20% 20%, rgba(59,130,246,0.06), transparent 30%);
+  transform: rotate(3deg); filter: blur(6px); pointer-events: none; z-index: 0;
+}
+.logika-stars {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.4;
+  background-image: radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.32) 50%, transparent 51%),
+                    radial-gradient(1px 1px at 88% 28%, rgba(255,255,255,0.28) 50%, transparent 51%),
+                    radial-gradient(1px 1px at 28% 66%, rgba(255,255,255,0.22) 50%, transparent 51%),
+                    radial-gradient(1px 1px at 62% 52%, rgba(255,255,255,0.22) 50%, transparent 51%);
+}
+
+@media (max-width: 820px) {
+  .timeline-list { padding-left: 44px; }
+}
+
+/* Animations */
+@keyframes logika-scan {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 200%; }
+}
+
+@keyframes dot-ping {
+  0% { transform: scale(1); opacity: 0.45; }
+  70% { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Certificaciones */
+.certs { margin-top: 26px; }
+.certs-title { margin: 0 0 10px; color: #eaf0fb; font-size: 18px; font-weight: 600; }
+.certs-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
+.cert-card { position: relative; display: flex; gap: 12px; align-items: flex-start; background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 14px; }
+.cert-card:hover { border-color: var(--accent-strong); box-shadow: 0 0 0 2px rgba(59,130,246,0.12), 0 8px 26px rgba(0,0,0,0.35); }
+.cert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px rgba(59,130,246,0.28), 0 0 10px rgba(59,130,246,0.35); margin-top: 4px; flex: 0 0 auto; }
+.cert-content { flex: 1; }
+.cert-title { color: #eef2ff; font-weight: 600; }
+.cert-meta { color: #9fb5d9; font-size: 13px; margin-top: 2px; }
+.cert-actions { margin-top: 8px; }
+.cred-btn { background: transparent; color: #dce7fb; border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+.cred-btn:hover { border-color: var(--accent-strong); box-shadow: 0 0 0 2px rgba(59,130,246,0.12); }
+.cred-panel { margin-top: 10px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); border-radius: 10px; padding: 10px 12px; }
+.cred-link { color: #d7e6ff; text-decoration: none; border-bottom: 1px dashed rgba(215,230,255,0.5); }
+.cred-link:hover { color: #ffffff; border-bottom-color: #ffffff; }

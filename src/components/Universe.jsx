@@ -1,4 +1,4 @@
-import { Canvas } from "@react-three/fiber";
+﻿import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { useState } from "react";
 import Planet from "./Planet";
@@ -6,19 +6,19 @@ import PlanetTooltip from "./PlanetTooltip";
 import planets from "../data/planets.json";
 import OrbitPath from "./OrbitPath";
 
-export default function Universe() {
+export default function Universe({ onPlanetClick }) {
   const [seleccionado, setSeleccionado] = useState(null); // Estado para el planeta hoverado
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 }); // Posición del tooltip
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 }); // PosiciÃ³n del tooltip
 
-  // Actualiza la posición del tooltip cuando el ratón se mueve
+  // Actualiza la posiciÃ³n del tooltip cuando el ratÃ³n se mueve
   const handleMouseMove = (e) => {
     setTooltipPos({ x: e.clientX + 10, y: e.clientY + 10 });
   };
 
   return (
     <div
-      style={{ width: "100vw", height: "100vh", position: "relative" }}
-      onMouseMove={handleMouseMove}  // Capturamos el movimiento del ratón
+      style={{ width: "100%", height: "100%", position: "relative" }}
+      onMouseMove={handleMouseMove}  // Capturamos el movimiento del ratÃ³n
     >
       <Canvas camera={{ position: [0, 5, 20], fov: 60 }}>
         <ambientLight intensity={0.4} />
@@ -26,7 +26,7 @@ export default function Universe() {
         <pointLight position={[-10, -10, -10]} intensity={0.6} color="#70a1ff" />
         <pointLight position={[0, 0, 0]} intensity={0.4} color="#ffffff" />
 
-        {/* ✨ Fondo estrellado */}
+        {/* âœ¨ Fondo estrellado */}
         <Stars radius={100} depth={50} count={4000} factor={4} fade />
 
         {/* Mapea los planetas y pasa las funciones de hover */}
@@ -36,17 +36,22 @@ export default function Universe() {
             <Planet
               key={`planet-${i}`}
               {...p}
-              onClick={() => setSeleccionado(p)}  // Cambia el planeta seleccionado
-              onHover={(planet) => setSeleccionado(planet)}  // Actualiza el planeta hoverado
-              onLeave={() => setSeleccionado(null)}  // Resetea el planeta hoverado
+              onClick={() => {
+                setSeleccionado(p);
+                if (onPlanetClick) onPlanetClick(p);
+              }}
+              onHover={(planet) => setSeleccionado(planet)}
+              onLeave={() => setSeleccionado(null)}
             />
           </>
         ))}
         <OrbitControls enableZoom={true} />
       </Canvas>
 
-      {/* Mostrar el tooltip si un planeta está siendo hoverado */}
+      {/* Mostrar el tooltip si un planeta estÃ¡ siendo hoverado */}
       <PlanetTooltip planet={seleccionado} position={tooltipPos} />
     </div>
   );
 }
+
+
