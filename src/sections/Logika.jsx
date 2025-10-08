@@ -6,19 +6,19 @@ export default function Logika() {
     {
       title: "Educación Secundaria Obligatoria",
       place: "IES Campo de Calatrava (Miguelturra)",
-      period: "2016 — 2020",
+      period: "sep 2016 — may 2020",
       details: "",
     },
     {
       title: "Bachillerato",
       place: "IES Campo de Calatrava (Miguelturra)",
-      period: "2020 — 2022",
+      period: "sep 2020 — may 2022",
       details: "Itinerario científico.",
     },
     {
       title: "Grado en Ingeniería Informática",
       place: "Universidad de Castilla‑La Mancha (Ciudad Real)",
-      period: "2022 — Actualidad",
+      period: "sep 2022 — Actualidad",
       details: "Intensificación en Tecnologías de la Información.",
     },
   ];

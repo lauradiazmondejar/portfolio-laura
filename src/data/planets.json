@@ -21,22 +21,23 @@
     "info": "Formación"
   },
   {
-    "name": "Kodia",
-    "color": "#00c8d7",
-    "size": 1.1,
-    "orbit": 3,
-    "material": "holographic",
-    "metalness": 0.3,
-    "roughness": 0.4
-  },
-  {
     "name": "Praxis",
     "color": "#c08457",
     "size": 1.0,
-    "orbit": 4.5,
+    "orbit": 3,
     "material": "rock",
     "metalness": 0.1,
-    "roughness": 0.9
+    "roughness": 0.9,
+    "info": "Experiencia laboral"
+  },
+  {
+    "name": "Kodia",
+    "color": "#00c8d7",
+    "size": 1.1,
+    "orbit": 4.5,
+    "material": "holographic",
+    "metalness": 0.3,
+    "roughness": 0.4
   },
   {
     "name": "Synthia",
@@ -59,7 +60,7 @@
   {
     "name": "Cirrus",
     "color": "#f0f0f0",
-    "size": 0.7,
+    "size": 1.5,
     "orbit": 9,
     "material": "pearl",
     "metalness": 0.2,

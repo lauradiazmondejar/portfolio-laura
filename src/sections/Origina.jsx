@@ -27,8 +27,13 @@ export default function Origina() {
               </p>
 
               <div className="origina-contact">
-                <a className="contact-link" href="mailto:lauradiazmondejar@gmail.com">lauradiazmondejar@gmail.com</a>
-                <a className="contact-link" href="mailto:laura.diaz30@alu.uclm.es">laura.diaz30@alu.uclm.es</a>
+                <a className="cv-btn" href={`${import.meta.env.BASE_URL}cv.pdf`} target="_blank" rel="noopener noreferrer">CV</a>
+                <a className="contact-link" href="mailto:laura.diaz30@alu.uclm.es" aria-label="Enviar correo a laura.diaz30@alu.uclm.es">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 6 8-6v10H4z"/>
+                  </svg>
+                  <span>laura.diaz30@alu.uclm.es</span>
+                </a>
                 <a
                   className="linkedin-btn"
                   href="https://www.linkedin.com/in/laura-diaz-mondejar/"
@@ -42,7 +47,19 @@ export default function Origina() {
                   </svg>
                   <span>LinkedIn</span>
                 </a>
-                <a className="cv-btn" href={`${import.meta.env.BASE_URL}cv.pdf`} target="_blank" rel="noopener noreferrer">Ver CV</a>
+                <a
+                  className="github-btn"
+                  href="https://github.com/lauradiazmondejar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub de Laura"
+                  title="GitHub"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.11.79-.25.79-.56v-2c-3.22.7-3.9-1.39-3.9-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.11-.75.4-1.26.72-1.55-2.57-.29-5.27-1.29-5.27-5.76 0-1.27.46-2.31 1.2-3.13-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.2a11.15 11.15 0 0 1 5.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.59.23 2.77.11 3.06.74.82 1.2 1.86 1.2 3.13 0 4.48-2.71 5.46-5.29 5.75.41.35.77 1.04.77 2.1v3.11c0 .31.2.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
 
@@ -62,4 +79,3 @@ export default function Origina() {
     </section>
   );
 }
-

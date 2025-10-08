@@ -31,26 +31,26 @@ export default function Praxis() {
           transition={{ duration: 0.6 }}
           className="praxis-header"
         >
-          <span className="praxis-chip">Experiencia</span>
-          <h2 className="praxis-title">Praxis — Línea del tiempo</h2>
+          <span className="praxis-chip">Planeta rojo</span>
+          <h2 className="praxis-title">Praxis — Experiencia laboral</h2>
           <p className="praxis-subtitle">Mi experiencia laboral reciente.</p>
           <div className="praxis-divider" />
         </motion.div>
 
-        <div className="timeline-right">
-          <div className="timeline-line-right" aria-hidden="true" />
-          <ul className="timeline-list-right">
+        <div className="timeline-left">
+          <div className="timeline-line-left" aria-hidden="true" />
+          <ul className="timeline-list-left">
             {items.map((it, idx) => (
               <motion.li
                 key={idx}
-                className="timeline-item-right"
-                initial={{ opacity: 0, x: 12 }}
+                className="timeline-item-left"
+                initial={{ opacity: 0, x: -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45, delay: 0.06 * idx }}
               >
-                <div className="dot-right" />
-                <div className="content-right">
+                <div className="dot-left" />
+                <div className="content-left">
                   <div className="period">{it.period}</div>
                   <h3 className="title">{it.title}</h3>
                   <div className="place">{it.place}</div>

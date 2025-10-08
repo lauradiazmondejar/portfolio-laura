@@ -3,6 +3,7 @@ import Universo from "./components/Universe";
 import { motion } from "framer-motion";
 import Origina from "./sections/Origina";
 import Logika from "./sections/Logika";
+import Praxis from "./sections/Praxis";
 
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
@@ -114,6 +115,7 @@ export default function App() {
       >
         <Origina />
         <Logika />
+        <Praxis />
         {/* SecciÃ³n de los planetas */}
         <section id="OriginaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Origina: Sobre mÃ­</h2>
@@ -130,7 +132,7 @@ export default function App() {
           <p>InformaciÃ³n sobre el planeta Kodia...</p>
         </section>
 
-        <section id="Praxis" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
+        <section id="PraxisOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Praxis: Experiencia prÃ¡ctica</h2>
           <p>InformaciÃ³n sobre el planeta Praxis...</p>
         </section>
@@ -153,6 +155,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
