@@ -1,0 +1,65 @@
+.praxis-section {
+  --accent: #c08457; /* terracota Praxis */
+  --accent-soft: rgba(192, 132, 87, 0.12);
+  --accent-strong: rgba(192, 132, 87, 0.5);
+  --panel: rgba(255,255,255,0.04);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: radial-gradient(1100px 600px at 15% -10%, var(--accent-soft), transparent 60%),
+              linear-gradient(180deg, #151822 0%, #0b0d17 100%);
+  border-radius: 12px;
+  padding: 48px 20px;
+}
+
+/* Grid artesanal sutil para un look “praxis” (proceso) */
+.praxis-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(192,132,87,0.02) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(192,132,87,0.015) 0 1px, transparent 1px 24px);
+  mask-image: radial-gradient(60% 50% at 50% 10%, #000 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.praxis-container { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+.praxis-header { text-align: left; }
+.praxis-chip { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; letter-spacing: .4px; color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(192,132,87,0.35); }
+.praxis-title { margin: 10px 0 6px; font-weight: 600; font-size: 28px; color: #f5f5f5; }
+.praxis-title::after { content: ""; display: block; width: 72px; height: 2px; margin-top: 8px; background: linear-gradient(90deg, var(--accent), transparent); opacity: .6; }
+.praxis-subtitle { margin: 0 0 12px; color: #ccd0d7; }
+.praxis-divider { position: relative; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: .45; border-radius: 999px; background-size: 200% 100%; animation: praxis-shimmer 6s ease-in-out infinite; }
+.praxis-divider::before { content: ""; position: absolute; top: 50%; right: -6px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px rgba(192,132,87,0.5), 0 0 18px rgba(192,132,87,0.28); transform: translateY(-50%); animation: praxis-orbit 4.8s linear infinite; }
+
+/* Timeline alineada a la derecha */
+.timeline-right { position: relative; margin-top: 22px; }
+.timeline-line-right { position: absolute; right: 16px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, rgba(192,132,87,0) 0%, rgba(192,132,87,0.35) 50%, rgba(192,132,87,0) 100%); background-size: 100% 200%; animation: praxis-scan 6s linear infinite; }
+.timeline-list-right { list-style: none; margin: 0; padding: 0 48px 0 0; }
+.timeline-item-right { position: relative; padding: 10px 12px 16px; border-right: 1px dashed rgba(255,255,255,0.06); margin-right: -1px; }
+.timeline-item-right .dot-right { position: absolute; right: -37px; top: 14px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px rgba(192,132,87,0.28), 0 0 12px rgba(192,132,87,0.35); }
+.timeline-item-right .dot-right::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); opacity: .35; animation: dot-ping-praxis 3.6s ease-out infinite; }
+.timeline-item-right .content-right { position: relative; background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 14px; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.timeline-item-right .content-right::after { content: ""; position: absolute; top: 22px; right: -8px; width: 0; height: 0; border-left: 8px solid rgba(255,255,255,0.08); border-top: 8px solid transparent; border-bottom: 8px solid transparent; filter: drop-shadow(0 0 2px rgba(0,0,0,0.25)); }
+.timeline-item-right:hover .content-right { border-color: var(--accent-strong); box-shadow: 0 0 0 2px rgba(192,132,87,0.10), 0 6px 22px rgba(0,0,0,0.3); transform: translateY(-0.5px); }
+.timeline-item-right:hover .content-right::after { border-left-color: rgba(192,132,87,0.35); }
+.timeline-item-right .period { color: var(--accent); font-weight: 600; font-size: 12px; letter-spacing: .3px; margin-bottom: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-align: right; }
+.timeline-item-right .title { margin: 0; color: #eef2ff; font-size: 18px; font-weight: 600; letter-spacing: .2px; text-align: right; }
+.timeline-item-right .place { display: inline-block; margin: 4px 0 6px; color: #e8e3dc; font-size: 13.5px; text-align: right; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 4px 8px; }
+.timeline-item-right .details { margin: 0; color: #e6ebf3; font-size: 14px; opacity: .9; text-align: right; }
+
+/* Fondo */
+.praxis-aurora { position: absolute; right: -12%; top: -8%; width: 140%; height: 120%; background: radial-gradient(60% 50% at 82% 8%, rgba(192,132,87,0.08), transparent 60%), conic-gradient(from 200deg at 20% 20%, rgba(192,132,87,0.06), transparent 30%); transform: rotate(-2deg); filter: blur(6px); pointer-events: none; z-index: 0; }
+.praxis-stars { position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: .4; background-image: radial-gradient(1px 1px at 14% 18%, rgba(255,255,255,0.32) 50%, transparent 51%), radial-gradient(1px 1px at 86% 26%, rgba(255,255,255,0.28) 50%, transparent 51%), radial-gradient(1px 1px at 28% 68%, rgba(255,255,255,0.22) 50%, transparent 51%), radial-gradient(1px 1px at 60% 52%, rgba(255,255,255,0.22) 50%, transparent 51%); }
+
+@keyframes praxis-scan { 0% { background-position: 0 0; } 100% { background-position: 0 200%; } }
+@keyframes dot-ping-praxis { 0% { transform: scale(1); opacity: .45; } 70% { transform: scale(1.9); opacity: 0; } 100% { transform: scale(1.9); opacity: 0; } }
+@keyframes praxis-orbit { 0% { transform: translate(0, -50%);} 100% { transform: translate(calc(-100% - 12px), -50%);} }
+@keyframes praxis-shimmer { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 0%; } }
+
+@media (max-width: 820px) {
+  .timeline-list-right { padding-right: 44px; }
+}
+
