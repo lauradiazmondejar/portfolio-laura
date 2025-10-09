@@ -5,22 +5,22 @@ import Origina from "./sections/Origina";
 import Logika from "./sections/Logika";
 import Praxis from "./sections/Praxis";
 import Kodia from "./sections/Kodia";
+import Synthia from "./sections/Synthia";
 
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
 
   const manejarClickPlaneta = (planeta) => {
-    setPlanetaSeleccionado(planeta); // Actualiza el planeta seleccionado
-  };
-
-  useEffect(() => {
-    if (planetaSeleccionado?.name) {
-      const el = document.getElementById(planetaSeleccionado.name);
+    // Guardamos el planeta y forzamos el scroll inmediato
+    setPlanetaSeleccionado(planeta);
+    if (planeta?.name) {
+      const el = document.getElementById(planeta.name);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }, [planetaSeleccionado]);
+  };
+
 
   return (
     <div style={{ position: "relative", width: "100vw", height: "100vh", overflowY: "auto" }}>
@@ -83,6 +83,7 @@ export default function App() {
           >
             Sistema Lauralis
           </span>
+          {". Pulsa un planeta:"}
         </motion.div>
       </motion.div>
 
@@ -118,6 +119,7 @@ export default function App() {
         <Logika />
         <Praxis />
         <Kodia />
+        <Synthia />
         {/* SecciÃ³n de los planetas */}
         <section id="OriginaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Origina: Sobre mÃ­</h2>
@@ -139,7 +141,7 @@ export default function App() {
           <p>InformaciÃ³n sobre el planeta Praxis...</p>
         </section>
 
-        <section id="Synthia" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
+        <section id="SynthiaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
           <h2>Synthia: Creatividad y arte digital</h2>
           <p>InformaciÃ³n sobre el planeta Synthia...</p>
         </section>
@@ -157,10 +159,6 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
 
 
 

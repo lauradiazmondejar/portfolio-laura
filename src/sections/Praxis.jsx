@@ -42,7 +42,7 @@ export default function Praxis() {
         <div className="timeline-left">
           <div className="timeline-line-left" aria-hidden="true" />
           <ul className="timeline-list-left">
-            {items.map((it, idx) => (
+            {[...items].reverse().map((it, idx) => (
               <motion.li
                 key={idx}
                 className="timeline-item-left"

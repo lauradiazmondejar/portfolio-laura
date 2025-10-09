@@ -44,7 +44,7 @@ export default function Logika() {
         <div className="timeline">
           <div className="timeline-line" aria-hidden="true" />
           <ul className="timeline-list">
-            {items.map((it, idx) => (
+            {[...items].reverse().map((it, idx) => (
               <motion.li
                 key={idx}
                 className="timeline-item"
@@ -102,4 +102,3 @@ export default function Logika() {
     </section>
   );
 }
-
