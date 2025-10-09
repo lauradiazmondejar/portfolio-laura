@@ -27,24 +27,6 @@ function Tool({ name, children, href }) {
 }
 
 export default function Kodia() {
-  const projects = [
-    {
-      title: "Gestor de tareas (Java)",
-      desc: "CLI simple con persistencia y pruebas.",
-      link: "https://github.com/lauradiazmondejar",
-    },
-    {
-      title: "AnÃ¡lisis de datos (Python)",
-      desc: "Pandas + visualizaciÃ³n bÃ¡sica.",
-      link: "https://github.com/lauradiazmondejar",
-    },
-    {
-      title: "Miniâ€‘web (HTML/CSS/JS)",
-      desc: "Landing responsive con interacciones.",
-      link: "https://github.com/lauradiazmondejar",
-    },
-  ];
-
   return (
     <section id="Kodia" className="kodia-section">
       <div className="kodia-container">
@@ -70,11 +52,11 @@ export default function Kodia() {
             transition={{ duration: 0.45 }}
           >
             <h3>Lenguajes de programación</h3>
-            <div className="kd-badges">
-              <Badge label="Java" color="#f5f5f5" bg="rgba(244,68,62,0.18)" title="Java" />
-              <Badge label="Python" color="#f5f5f5" bg="rgba(53,114,165,0.22)" title="Python" />
-              <Badge label="SQL" color="#0b0d17" bg="rgba(0,200,215,0.65)" title="SQL" />
-              <Badge label="JS" color="#0b0d17" bg="rgba(247,223,30,0.7)" title="JavaScript" />
+            <div className="kd-icons">
+              <span className="kd-icon" data-tip="Java"><img src={`${import.meta.env.BASE_URL}logos/java.png`} alt="Java" /></span>
+              <span className="kd-icon" data-tip="Python"><img src={`${import.meta.env.BASE_URL}logos/python.png`} alt="Python" /></span>
+              <span className="kd-icon" data-tip="SQL"><img src={`${import.meta.env.BASE_URL}logos/sql.png`} alt="SQL" /></span>
+              <span className="kd-icon" data-tip="JavaScript"><img src={`${import.meta.env.BASE_URL}logos/javascript.png`} alt="JavaScript" /></span>
             </div>
           </motion.div>
 
@@ -86,9 +68,9 @@ export default function Kodia() {
             transition={{ duration: 0.45, delay: 0.05 }}
           >
             <h3>Lenguajes de marcas</h3>
-            <div className="kd-badges">
-              <Badge label="HTML" color="#f5f5f5" bg="rgba(227,76,38,0.28)" title="HTML5" />
-              <Badge label="CSS" color="#f5f5f5" bg="rgba(38,77,228,0.28)" title="CSS3" />
+            <div className="kd-icons">
+              <span className="kd-icon" data-tip="HTML"><img src={`${import.meta.env.BASE_URL}logos/html.png`} alt="HTML" /></span>
+              <span className="kd-icon" data-tip="CSS"><img src={`${import.meta.env.BASE_URL}logos/css.png`} alt="CSS" /></span>
             </div>
           </motion.div>
 
@@ -99,18 +81,17 @@ export default function Kodia() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.45, delay: 0.1 }}
           >
-            <h3>Entornos de desarrollo y control de versiones</h3>
-            <div className="kd-tools">
-              <Tool name="VS Code" href="https://code.visualstudio.com/">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-                  <path fill="#23a6f2" d="M23 2.5v19l-7.5 2-9.6-8.1-3.4 3.1-2.1-2.1 4.7-4.2L.4 6.9 2.5 4.8l3.4 3.1L15.5 0 23 2.5z"/>
-                </svg>
-              </Tool>
-              <Tool name="GitHub" href="https://github.com/lauradiazmondejar">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>
-                  <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.11.79-.25.79-.56v-2c-3.22.7-3.9-1.39-3.9-1.39-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.11-.75.4-1.26.72-1.55-2.57-.29-5.27-1.29-5.27-5.76 0-1.27.46-2.31 1.2-3.13-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.2a11.15 11.15 0 0 1 5.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.59.23 2.77.11 3.06.74.82 1.2 1.86 1.2 3.13 0 4.48-2.71 5.46-5.29 5.75.41.35.77 1.04.77 2.1v3.11c0 .31.2.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
-                </svg>
-              </Tool>
+            <h3>Entornos y control de versiones</h3>
+            <div className="kd-icons">
+              <a className="kd-icon" data-tip="VS Code" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" aria-label="VS Code">
+                <img src={`${import.meta.env.BASE_URL}logos/visualstudiocode.png`} alt="VS Code" />
+              </a>
+              <a className="kd-icon" data-tip="GitHub" href="https://github.com/lauradiazmondejar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src={`${import.meta.env.BASE_URL}logos/github.png`} alt="GitHub" />
+              </a>
+              <span className="kd-icon" data-tip="Git"><img src={`${import.meta.env.BASE_URL}logos/git.png`} alt="Git" /></span>
+              <span className="kd-icon" data-tip="Eclipse"><img src={`${import.meta.env.BASE_URL}logos/eclipse.png`} alt="Eclipse" /></span>
+              <span className="kd-icon" data-tip="MySQL Workbench"><img src={`${import.meta.env.BASE_URL}logos/workbench.png`} alt="MySQL Workbench" /></span>
             </div>
           </motion.div>
         </div>
@@ -121,6 +102,23 @@ export default function Kodia() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

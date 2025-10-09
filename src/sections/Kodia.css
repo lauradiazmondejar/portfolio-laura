@@ -16,12 +16,21 @@
 .kodia-divider { height:1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity:.45; border-radius:999px; }
 
 .kodia-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:22px; }
-.kodia-card { background: var(--panel); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; box-shadow: 0 6px 22px rgba(0,0,0,0.28); }
+.kodia-card { background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:14px; box-shadow: 0 6px 22px rgba(0,0,0,0.28); }
 .kodia-card h3 { margin:0 0 8px; color:#eaf9fb; font-weight:600; }
 
 /* Badges */
 .kd-badges { display:flex; flex-wrap:wrap; gap:8px; }
 .kd-badge { display:inline-flex; align-items:center; justify-content:center; padding:6px 10px; border-radius:999px; font-weight:600; font-size:12px; backdrop-filter: blur(2px); border:1px solid rgba(255,255,255,0.08); }
+
+/* Icon grids */
+.kd-icons { display:flex; flex-wrap:wrap; gap:16px; align-items: center; }
+.kd-icon { width:120px; height:120px; display:grid; place-items:center; border-radius:16px; background: #ffffff; border:1px solid #e5e8ec; box-shadow: 0 8px 24px rgba(0,0,0,0.22); position: relative; }
+.kd-icon img { width:72px; height:72px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25)); }
+.kd-icon:hover { transform: translateY(-1px); border-color: #cfd6de; }
+/* Tooltip */
+.kd-icon::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(0); background: rgba(8,10,16,0.92); color: #eaf9fb; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 1; white-space: nowrap; pointer-events: none; opacity: 0; border: 1px solid rgba(0,200,215,0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: opacity .15s ease, transform .15s ease; }
+.kd-icon:hover::after { opacity: 1; transform: translateX(-50%) translateY(-2px); }
 
 /* Tools */
 .kd-tools { display:flex; gap:12px; flex-wrap:wrap; }
@@ -43,4 +52,3 @@
 .kodia-stars { position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.38; background-image: radial-gradient(1px 1px at 14% 18%, rgba(255,255,255,0.32) 50%, transparent 51%), radial-gradient(1px 1px at 86% 26%, rgba(255,255,255,0.28) 50%, transparent 51%), radial-gradient(1px 1px at 28% 68%, rgba(255,255,255,0.22) 50%, transparent 51%), radial-gradient(1px 1px at 60% 52%, rgba(255,255,255,0.22) 50%, transparent 51%); }
 
 @media (max-width: 920px) { .kodia-grid { grid-template-columns: 1fr; } }
-
