@@ -37,8 +37,8 @@ export default function Kodia() {
           transition={{ duration: 0.6 }}
           className="kodia-header"
         >
-          <span className="kodia-chip">Código</span>
-          <h2 className="kodia-title">Kodia — Desarrollo</h2>
+          <span className="kodia-chip">Planeta verde</span>
+          <h2 className="kodia-title">Kodia — Lenguajes y tecnologías</h2>
           <p className="kodia-subtitle">Lenguajes de programación, lenguajes de marcas y entornos.</p>
           <div className="kodia-divider" />
         </motion.div>
