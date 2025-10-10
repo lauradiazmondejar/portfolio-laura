@@ -7,6 +7,7 @@ import Praxis from "./sections/Praxis";
 import Kodia from "./sections/Kodia";
 import Synthia from "./sections/Synthia";
 import Cirrus from "./sections/Cirrus";
+import "./Hero.css";
 
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
@@ -41,40 +42,10 @@ export default function App() {
         }}
       >
         {/* ðŸª© Imagen redonda */}
-        <motion.img
-          src={`${import.meta.env.BASE_URL}laura.jpeg`}
-          alt="Laura DÃ­az"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          style={{
-            width: "100px",
-            height: "100px",
-            borderRadius: "50%",
-            border: "2px solid #ffd6f6",
-            boxShadow: "0 0 30px rgba(255, 214, 246, 0.4)",
-            objectFit: "cover",
-          }}
-        />
+        <motion.img className="hero-avatar" src={`${import.meta.env.BASE_URL}laura.jpeg`} alt="Laura D��az" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} />
 
         {/* ðŸ’¬ Bocadillo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          style={{
-            background: "rgba(255, 255, 255, 0.08)",
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-            backdropFilter: "blur(12px)",
-            borderRadius: "20px",
-            padding: "12px 22px",
-            color: "#ffffff",
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: "1rem",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-            whiteSpace: "nowrap",
-          }}
-        >
+        <motion.div className="hero-bubble" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6, duration: 0.8 }}>
           Bienvenido/a a {" "}
           <span
             style={{
@@ -89,7 +60,7 @@ export default function App() {
       </motion.div>
 
       {/* ðŸŒŒ Universo detrÃ¡s */}
-      <div style={{ width: "100%", height: "100vh", position: "absolute", top: 0, left: 0, overflow: "hidden" }}>
+      <div className="universe-wrap">
         <Universo onPlanetClick={manejarClickPlaneta} />
         {/* Fade inferior para suavizar la transición al contenido */}
         <div
@@ -111,7 +82,7 @@ export default function App() {
         style={{
           /* Reducimos la separación superior y unificamos con un fade suave */
           padding: "120px 0 160px",
-          marginTop: "100vh",
+          marginTop: "100dvh",
           background:
             "linear-gradient(180deg, rgba(11,13,23,0) 0%, rgba(11,13,23,0.8) 60%, rgba(11,13,23,1) 100%)",
         }}
@@ -140,6 +111,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
