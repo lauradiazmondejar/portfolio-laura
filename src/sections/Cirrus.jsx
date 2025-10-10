@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import "./Cirrus.css";
 
 const skills = [
-  { name: "Comunicación", value: 90 },
-  { name: "Trabajo en equipo", value: 95 },
-  { name: "Organización", value: 88 },
-  { name: "Responsabilidad", value: 92 },
-  { name: "Resolución de problemas", value: 87 },
+  { name: "Comunicación", value: 75 },
+  { name: "Trabajo en equipo", value: 80 },
+  { name: "Organización", value: 90 },
+  { name: "Responsabilidad", value: 95 },
+  { name: "Resolución de problemas", value: 85 },
   { name: "Aprendizaje rápido", value: 90 },
 ];
 
@@ -21,9 +21,9 @@ export default function Cirrus() {
           transition={{ duration: 0.6 }}
           className="cirrus-header"
         >
-          <span className="cirrus-chip">Soft skills</span>
-          <h2 className="cirrus-title">Cirrus — Aptitudes</h2>
-          <p className="cirrus-subtitle">Habilidades personales medidas en experiencia práctica.</p>
+          <span className="cirrus-chip">Planeta blanco</span>
+          <h2 className="cirrus-title">Cirrus — Soft Skills</h2>
+          <p className="cirrus-subtitle">Aquí te muestro mis habilidades interpersonales.</p>
           <div className="cirrus-divider" />
         </motion.div>
 
