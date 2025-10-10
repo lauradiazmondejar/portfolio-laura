@@ -5,10 +5,20 @@ html, body {
   color: #f1f1f1;
   font-family: 'Space Grotesk', sans-serif;
   overflow-y: auto;
+  /* Custom rocket cursor with robust fallbacks:
+     1) Runtime-set var points to public PNG at BASE_URL
+     2) Fallback to bundled SVG
+     3) Final fallback to auto */
+  cursor: var(--cursor-url, url('./assets/rocket-cursor.svg') 2 2), url('./assets/rocket-cursor.svg') 2 2, auto;
 }
 h1 {
   text-align: center;
   margin-top: 20px;
   font-weight: 300;
   color: #d6b85a;
+}
+
+/* Ensure clickable elements keep pointer semantics as fallback */
+a, button, [role="button"], .clickable {
+  cursor: var(--cursor-url, url('./assets/rocket-cursor.svg') 2 2), url('./assets/rocket-cursor.svg') 2 2, pointer;
 }
