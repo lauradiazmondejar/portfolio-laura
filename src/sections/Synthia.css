@@ -55,7 +55,9 @@
 /* Cielo para colocar las estrellas PNG */
 .synthia-sky {
   position: relative;
-  height: 600px;
+  /* Tamaño base de cada estrella (desktop) */
+  --star-size: 160px;
+  height: 640px;
   border-radius: 20px;
   border: 1px solid rgba(168, 127, 209, 0.25);
   background:
@@ -89,13 +91,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  width: var(--star-size);
   text-decoration: none;
 }
 
+/* Contenedor del texto/botón bajo la estrella */
+.synthia-label-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
 .synthia-star {
-  width: 140px;
-  height: 140px;
+  width: var(--star-size);
+  height: var(--star-size);
   display: block;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(168,127,209,0.45));
@@ -105,8 +117,9 @@
 /* Efecto de iluminación al hover (sobre imagen o wrapper) */
 .synthia-star:hover,
 .synthia-star-link:hover .synthia-star,
-.synthia-star-wrap:hover .synthia-star {
-  transform: scale(1.12);
+.synthia-star-wrap:hover .synthia-star,
+.synthia-star-hit:hover .synthia-star {
+  transform: scale(1.1);
   filter:
     drop-shadow(0 0 10px rgba(168,127,209,0.75))
     drop-shadow(0 0 24px rgba(168,127,209,0.85))
@@ -133,8 +146,8 @@
 
 /* Fallback si falta la imagen */
 .synthia-star-fallback {
-  width: 112px;
-  height: 112px;
+  width: calc(var(--star-size) * 0.8);
+  height: calc(var(--star-size) * 0.8);
   border-radius: 50%;
   background: radial-gradient(circle at 40% 35%, rgba(168,127,209,0.85), rgba(168,127,209,0.45));
   box-shadow: 0 0 16px rgba(168,127,209,0.5);
@@ -142,12 +155,13 @@
 
 /* Etiqueta bajo cada estrella */
 .synthia-label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.1;
   color: #eadefb;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-  max-width: 180px;
+  max-width: var(--star-size);
+  width: 100%;
 }
 
 /* Botón/enlace a GitHub bajo la etiqueta */
@@ -178,9 +192,7 @@
 }
 
 @media (max-width: 800px) {
-  .synthia-sky { height: 500px; }
-  .synthia-star { width: 110px; height: 110px; }
-  .synthia-star-fallback { width: 90px; height: 90px; }
-  .synthia-label { font-size: 0.95rem; max-width: 170px; }
+  .synthia-sky { height: 520px; --star-size: 130px; }
+  .synthia-label { font-size: 0.95rem; }
   .synthia-github { font-size: 0.85rem; }
 }
