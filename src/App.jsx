@@ -6,6 +6,7 @@ import Logika from "./sections/Logika";
 import Praxis from "./sections/Praxis";
 import Kodia from "./sections/Kodia";
 import Synthia from "./sections/Synthia";
+import Cirrus from "./sections/Cirrus";
 
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
@@ -120,45 +121,30 @@ export default function App() {
         <Praxis />
         <Kodia />
         <Synthia />
+        <Cirrus />
         {/* SecciÃ³n de los planetas */}
-        <section id="OriginaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Origina: Sobre mÃ­</h2>
-          <p>InformaciÃ³n sobre el planeta Origina...</p>
-        </section>
+        
 
-        <section id="LogikaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Logika: FormaciÃ³n y pensamiento lÃ³gico</h2>
-          <p>InformaciÃ³n sobre el planeta Logika...</p>
-        </section>
+        
 
-        <section id="KodiaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Kodia: Proyectos y cÃ³digo</h2>
-          <p>InformaciÃ³n sobre el planeta Kodia...</p>
-        </section>
+        
 
-        <section id="PraxisOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Praxis: Experiencia prÃ¡ctica</h2>
-          <p>InformaciÃ³n sobre el planeta Praxis...</p>
-        </section>
+        
 
-        <section id="SynthiaOld" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Synthia: Creatividad y arte digital</h2>
-          <p>InformaciÃ³n sobre el planeta Synthia...</p>
-        </section>
+        
 
-        <section id="Nova" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Nova: ExploraciÃ³n y futuro</h2>
-          <p>InformaciÃ³n sobre el planeta Nova...</p>
-        </section>
+        
 
-        <section id="Cirrus" style={{ padding: "20px", backgroundColor: "#2c2f3b", borderRadius: "8px", marginBottom: "20px" }}>
-          <h2>Cirrus: Espacio personal</h2>
-          <p>InformaciÃ³n sobre el planeta Cirrus...</p>
-        </section>
+        
       </div>
     </div>
   );
 }
+
+
+
+
+
 
 
 

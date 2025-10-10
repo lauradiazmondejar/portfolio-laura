@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import "./Synthia.css";
 
 
@@ -23,10 +23,7 @@ export default function Synthia() {
         >
           <span className="synthia-chip">Planeta violeta</span>
           <h2 className="synthia-title">Synthia — Proyectos de la carrera</h2>
-          <p className="synthia-subtitle">
-            Aquí vivirán tus estrellas PNG, cada una enlazando a un proyecto. Coloca tus
-            archivos en <code>public/proyectos/</code> y ajusta el listado.
-          </p>
+          <p className="synthia-subtitle">Un cielo de proyectos: cada estrella enlaza a un repositorio</p>
           <div className="synthia-divider" />
         </motion.div>
 
@@ -120,3 +117,6 @@ export default function Synthia() {
     </section>
   );
 }
+
+
+

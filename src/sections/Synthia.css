@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --synthia-accent: #a87fd1; /* violeta Synthia */
 }
 
@@ -45,17 +45,25 @@
   margin: 6px 0 4px;
 }
 
-.synthia-divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(168,127,209,0) 0%, rgba(168,127,209,0.6) 35%, rgba(168,127,209,0) 100%);
-  margin-top: 8px;
+.synthia-divider {\n  width: 100%;\n  height: 1px;\n  background: linear-gradient(90deg, rgba(168,127,209,0) 0%, rgba(168,127,209,0.6) 35%, rgba(168,127,209,0) 100%);\n  margin-top: 8px;\n  position: relative;\n  background-size: 200% 100%;\n  animation: syn-shimmer 6s ease-in-out infinite;\n  border-radius: 999px;\n  opacity: .9;\n}\n\n.synthia-divider::before {\n  content: "";\n  position: absolute;\n  top: 50%;\n  left: -6px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: var(--synthia-accent);\n  box-shadow: 0 0 10px rgba(168,127,209,0.6), 0 0 18px rgba(168,127,209,0.35);\n  transform: translateY(-50%);\n  animation: syn-orbit 4.8s linear infinite;\n  opacity: .95;\n}\n
+
+/* Estrellas de fondo sutiles */
+.synthia-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.35) 50%, transparent 51%),
+    radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,0.28) 50%, transparent 51%),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.22) 50%, transparent 51%),
+    radial-gradient(1px 1px at 60% 50%, rgba(255,255,255,0.22) 50%, transparent 51%);
+  opacity: .35;
+  pointer-events: none;
 }
 
 /* Cielo para colocar las estrellas PNG */
 .synthia-sky {
   position: relative;
-  /* Tamaño base de cada estrella (desktop) */
+  /* TamaÃ±o base de cada estrella (desktop) */
   --star-size: 160px;
   height: 640px;
   border-radius: 20px;
@@ -96,7 +104,7 @@
   text-decoration: none;
 }
 
-/* Contenedor del texto/botón bajo la estrella */
+/* Contenedor del texto/botÃ³n bajo la estrella */
 .synthia-label-wrap {
   display: flex;
   flex-direction: column;
@@ -114,7 +122,13 @@
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Efecto de iluminación al hover (sobre imagen o wrapper) */
+/* FlotaciÃ³n sutil por estrella */
+.synthia-star-wrap { animation: floaty 9s ease-in-out infinite; }
+.synthia-star-wrap:nth-child(2n) { animation-duration: 10.5s; }
+.synthia-star-wrap:nth-child(3n) { animation-duration: 12s; }
+@keyframes floaty { 0%, 100% { transform: translate(-50%, -50%) translateY(0); } 50% { transform: translate(-50%, -50%) translateY(-8px); } }
+
+/* Efecto de iluminaciÃ³n al hover (sobre imagen o wrapper) */
 .synthia-star:hover,
 .synthia-star-link:hover .synthia-star,
 .synthia-star-wrap:hover .synthia-star,
@@ -126,7 +140,7 @@
     brightness(1.25) saturate(1.1);
 }
 
-/* Acentuar también la etiqueta al hover */
+/* Acentuar tambiÃ©n la etiqueta al hover */
 .synthia-star-link:hover .synthia-label,
 .synthia-star-wrap:hover .synthia-label {
   color: #ffffff;
@@ -164,7 +178,7 @@
   width: 100%;
 }
 
-/* Botón/enlace a GitHub bajo la etiqueta */
+/* BotÃ³n/enlace a GitHub bajo la etiqueta */
 .synthia-github {
   display: inline-flex;
   align-items: center;
@@ -196,3 +210,4 @@
   .synthia-label { font-size: 0.95rem; }
   .synthia-github { font-size: 0.85rem; }
 }
+
