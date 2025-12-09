@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import "./Synthia.css";
 
@@ -5,16 +6,17 @@ const proyectos = [
   {
     id: "sokoban",
     title: "Sokoban",
-    description: "Implementación del juego Sokoban que consigue la secuencia de movimientos desde cualquier nivel válido del tablero hasta su solución empleando estrategias de búsqueda estudiadas en la asignatura Sistemas Inteligentes.",
+    description: "Implementacion del juego Sokoban que consigue la secuencia de movimientos desde cualquier nivel valido del tablero hasta su solucion empleando estrategias de busqueda estudiadas en Sistemas Inteligentes.",
     img: "sokoban.png",
+    images: ["sokoban/NIVEL.png", "sokoban/BFS.png", "sokoban/AESTRELLA.png"],
     href: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
     github: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
-    tech: ["Java", "Heurísticas", "Búsqueda", "VSCode"],
+    tech: ["Java", "Heuristicas", "Busqueda", "VSCode"],
   },
   {
     id: "victini",
     title: "IPOkemon",
-    description: "Aplicación de escritorio que permite intereactuar con un pokemon (Victini), permitiendo al usuario ver sus diferentes estados y acciones. Desarrollada para la asignatura de Interacción Persona-Ordenador II.",
+    description: "Aplicacion de escritorio para interactuar con un Pokemon (Victini), mostrando estados y acciones. Proyecto de la asignatura de Interaccion Persona-Ordenador II.",
     img: "victini.png",
     href: "https://github.com/lauradiazmondejar/VictiniLDM.git",
     github: "https://github.com/lauradiazmondejar/VictiniLDM.git",
@@ -23,7 +25,7 @@ const proyectos = [
   {
     id: "remotetypes",
     title: "RemoteTypes",
-    description: "Servicio de almacenamiento para diferentes estructuras de datos: listas, conjuntos y diccionarios. El servicio realiza la persistencia de los objetos, permitiendo su acceso y modificación de manera interactiva. Desarrollado para la asignatura de Sistemas Distribuidos.",
+    description: "Servicio de almacenamiento para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
     img: "remotetypes.png",
     href: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
     github: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
@@ -32,8 +34,18 @@ const proyectos = [
   {
     id: "alfatrip",
     title: "AlfaTrip",
-    description: "Plataforma web integral diseñada para planificar y gestionar viajes de forma eficiente, centralizando la búsqueda de vuelos, alojamientos y herramientas de navegación mediante la integración de APIs externas como Google Flights, Google Hotels y OpenStreetMap. Desarrollada en equipo para la asignatura de Integración de Sistemas Informáticos.",
+    description: "Plataforma web para planificar viajes integrando APIs (Google Flights, Hotels, OpenStreetMap). Proyecto en equipo para Integracion de Sistemas Informaticos.",
     img: "alfatrip.png",
+    images: [
+      "alfatrip/alfatrip1.png",
+      "alfatrip/alfatrip2.png",
+      "alfatrip/alfatrip3.png",
+      "alfatrip/alfatrip4.png",
+      "alfatrip/alfatrip5.png",
+      "alfatrip/alfatrip6.png",
+      "alfatrip/alfatrip7.png",
+      "alfatrip/alfatrip8.png",
+    ],
     href: "https://github.com/lauradiazmondejar/isi-alfatrip.git",
     github: "https://github.com/lauradiazmondejar/isi-alfatrip.git",
     tech: ["HTML", "CSS", "Python", "Microservicios", "APIs", "Docker", "PostgreSQL", "VSCode"],
@@ -41,7 +53,7 @@ const proyectos = [
   {
     id: "geoparque",
     title: "Geoparque ESIstencial",
-    description: "Prototipo de alta fidelidad que simula la navegación entre pantallas de una aplicación móvil educativa orientada a fomentar la exploración del entorno natural mediante rutas y participación ciudadana. Desarrollado para la asignatura de Interacción Persona-Ordenador II.",
+    description: "Prototipo de alta fidelidad para una app movil educativa con rutas y participacion ciudadana. Proyecto de Interaccion Persona-Ordenador II.",
     img: "geoparque.png",
     href: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
     github: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
@@ -50,7 +62,7 @@ const proyectos = [
   {
     id: "gsi",
     title: "Gmail Security Interface (GSI)",
-    description: "Herramienta de concienciación en ciberseguridad diseñada para proteger a los usuarios frente al phishing y el robo de credenciales mediante un panel visual intuitivo. Integra funcionalidades para analizar correos de Gmail, escanear la seguridad de redes WiFi y evaluar la fortaleza de contraseñas. Desarrollada en equipo para la asignatura Gestión de Sistemas de la Información.",
+    description: "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
     img: "placeholder.png",
     href: "https://github.com/Jsesm/gsi.git",
     github: "https://github.com/Jsesm/gsi.git",
@@ -59,16 +71,16 @@ const proyectos = [
   {
     id: "iso24",
     title: "ISO24",
-    description: "Proyecto del laboratorio de la asignatura Ingeniería del Software II. Aborda la planificación integral de un sistema, abarcando desde la elicitación de requisitos y definición de casos de uso para cinco roles de usuario hasta la estructuración en grupos funcionales, todo bajo una arquitectura cliente-servidor.",
+    description: "Proyecto de Ingenieria del Software II: planificacion, requisitos, casos de uso y arquitectura cliente-servidor para cinco roles de usuario.",
     img: "placeholder.png",
     href: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
     github: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
-    tech: ["Git", "Visual Paradigm", "Gestión de proyectos", "Análisis de requisitos", "Agile" ],
+    tech: ["Git", "Visual Paradigm", "Gestion de proyectos", "Analisis de requisitos", "Agile"],
   },
   {
     id: "palettefit",
     title: "PaletteFit",
-    description: "Aplicación móvil multimedia para ayudar a los usuarios a combinar su ropa mediante puntuaciones de análisis de color inteligente. La app permite subir fotos de prendas, almacenar las prendas en un armario virtual, asignar conjuntos en un calendario, ver estadisticas y gamificación en base a cumplir retos diarios. Desarrollada para la asignatura de Multimedia.",
+    description: "App movil multimedia para combinar ropa con analisis de color. Incluye armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
     img: "placeholder.png",
     href: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
     github: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
@@ -77,7 +89,7 @@ const proyectos = [
   {
     id: "cve-2023-0386",
     title: "PoC CVE-2023-0386",
-    description: "Prueba de Concepto (PoC) sobre la vulnerabilidad CVE-2023-0386 en el kernel de Linux (OverlayFS), logrando una escalada local de privilegios hasta obtener acceso root en una máquina Ubuntu 22.04. Trabajo para la asignatura de Seguridad en Sistemas Informáticos.",
+    description: "Escalada local de privilegios en Ubuntu 22.04 explotando la vulnerabilidad OverlayFS (CVE-2023-0386). Trabajo de Seguridad en Sistemas Informaticos.",
     img: "placeholder.png",
     href: "#",
     github: "",
@@ -86,15 +98,46 @@ const proyectos = [
   {
     id: "gramola",
     title: "Gramola",
-    description: "Aplicación web Full-Stack que digitaliza la experiencia de una gramola moderna, permitiendo a los establecimientos (bares) registrarse y a los usuarios seleccionar y pagar por canciones. Integra autenticación, monetización y gestión de reproducción musical mediante APIs externas. Desarrollada para la asignatura de Tecnologías y Sistemas Web.",
+    description: "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
     img: "placeholder.png",
     href: "https://github.com/lauradiazmondejar/Gramola.git",
     github: "https://github.com/lauradiazmondejar/Gramola.git",
-    tech: ["Java", "Spring Boot", "TypeScript", "Angular","MySQL", "Selenium", "VSCode"],
+    tech: ["Java", "Spring Boot", "TypeScript", "Angular", "MySQL", "Selenium", "VSCode"],
   },
 ];
 
 export default function Synthia() {
+  const [slides, setSlides] = useState(() => {
+    const initial = {};
+    proyectos.forEach((p) => {
+      if (Array.isArray(p.images) && p.images.length > 0) initial[p.id] = 0;
+    });
+    return initial;
+  });
+
+  const [fullscreen, setFullscreen] = useState(null);
+
+  const changeSlide = (id, total, direction) => {
+    setSlides((prev) => {
+      const current = prev[id] ?? 0;
+      const next = (current + direction + total) % total;
+      return { ...prev, [id]: next };
+    });
+    setFullscreen((prev) => {
+      if (!prev || prev.id !== id) return prev;
+      const next = (prev.index + direction + total) % total;
+      return { ...prev, index: next };
+    });
+  };
+
+  const handleSlide = (id, total, direction) => {
+    setSlides((prev) => {
+      const current = prev[id] ?? 0;
+      const next = (current + direction + total) % total;
+      return { ...prev, [id]: next };
+    });
+  };
+
   return (
     <section id="Synthia" className="synthia-section">
       <div className="synthia-veil" aria-hidden="true" />
@@ -115,6 +158,12 @@ export default function Synthia() {
         <div className="synthia-grid">
           {proyectos.map((p, index) => {
             const repoLink = p.href || p.github || "#";
+            const hasCarousel = Array.isArray(p.images) && p.images.length > 0;
+            const totalImages = hasCarousel ? p.images.length : 1;
+            const activeIndex = hasCarousel ? slides[p.id] ?? 0 : 0;
+            const mediaSrc = hasCarousel
+              ? `${import.meta.env.BASE_URL}proyectos/${p.images[activeIndex]}`
+              : `${import.meta.env.BASE_URL}proyectos/${p.img}`;
 
             return (
               <motion.article
@@ -125,15 +174,51 @@ export default function Synthia() {
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45, delay: 0.05 * index }}
               >
-                <div className="synthia-card-media">
+                <div className={`synthia-card-media ${hasCarousel ? "has-carousel" : ""}`}>
                   <img
-                    src={`${import.meta.env.BASE_URL}proyectos/${p.img}`}
+                    src={mediaSrc}
                     alt={p.title}
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
                     }}
                   />
+                  {hasCarousel ? (
+                    <>
+                      <button
+                        type="button"
+                        className="synthia-nav prev"
+                        aria-label={`Anterior ${p.title}`}
+                        onClick={() => changeSlide(p.id, totalImages, -1)}
+                      >
+                        ‹
+                      </button>
+                      <button
+                        type="button"
+                        className="synthia-nav next"
+                        aria-label={`Siguiente ${p.title}`}
+                        onClick={() => changeSlide(p.id, totalImages, 1)}
+                      >
+                        ›
+                      </button>
+                      <div className="synthia-dots" aria-hidden="true">
+                        {p.images.map((_, dotIdx) => (
+                          <span
+                            key={dotIdx}
+                            className={`synthia-dot ${dotIdx === activeIndex ? "active" : ""}`}
+                          />
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        className="synthia-fullscreen"
+                        aria-label={`Maximizar ${p.title}`}
+                        onClick={() => setFullscreen({ id: p.id, index: activeIndex })}
+                      >
+                        ⤢
+                      </button>
+                    </>
+                  ) : null}
                   <span className="synthia-pill">Proyecto {index + 1}</span>
                 </div>
 
@@ -184,6 +269,58 @@ export default function Synthia() {
           })}
         </div>
       </div>
+
+      {fullscreen ? (
+        <div className="synthia-lightbox" role="dialog" aria-modal="true">
+          <button
+            type="button"
+            className="synthia-lightbox-close"
+            aria-label="Cerrar"
+            onClick={() => setFullscreen(null)}
+          >
+            ×
+          </button>
+          {(() => {
+            const current = proyectos.find((p) => p.id === fullscreen.id);
+            if (!current || !current.images || !current.images.length) return null;
+            const src = `${import.meta.env.BASE_URL}proyectos/${current.images[fullscreen.index]}`;
+            return (
+              <div className="synthia-lightbox-body">
+                <img src={src} alt={current.title} />
+                <div className="synthia-lightbox-dots">
+                  {current.images.map((_, i) => (
+                    <button
+                      key={i}
+                      className={`synthia-dot ${i === fullscreen.index ? "active" : ""}`}
+                      aria-label={`Ver imagen ${i + 1}`}
+                      onClick={() => {
+                        setFullscreen({ id: current.id, index: i });
+                        setSlides((prev) => ({ ...prev, [current.id]: i }));
+                      }}
+                    />
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  className="synthia-lightbox-nav prev"
+                  aria-label="Anterior"
+                  onClick={() => changeSlide(current.id, current.images.length, -1)}
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className="synthia-lightbox-nav next"
+                  aria-label="Siguiente"
+                  onClick={() => changeSlide(current.id, current.images.length, 1)}
+                >
+                  ›
+                </button>
+              </div>
+            );
+          })()}
+        </div>
+      ) : null}
     </section>
   );
 }

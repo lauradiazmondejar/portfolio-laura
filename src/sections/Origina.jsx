@@ -68,8 +68,8 @@ export default function Origina() {
             </div>
 
             <img
-              src={`${import.meta.env.BASE_URL}laura-vertical.jpeg`}
-              alt="Laura D�az Mond�jar"
+              src={`${import.meta.env.BASE_URL}laura-vertical.png`}
+              alt="Laura Díaz Mondéjar"
               className="origina-photo"
               loading="lazy"
             />
