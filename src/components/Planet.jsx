@@ -23,7 +23,6 @@ export default function Planeta({
       Kodia: "kodia.png",
       Praxis: "praxis.png",
       Synthia: "synthia.png",
-      Nova: "nova.png",
       Cirrus: "cirrus.png",
     };
     return map[name] || "default.png";
@@ -72,7 +71,7 @@ export default function Planeta({
       />
 
       {/* 🌫 Halo atmosférico para planetas brillantes */}
-      {["Origina", "Synthia", "Nova"].includes(name) && (
+      {["Origina", "Synthia"].includes(name) && (
         <mesh>
           <sphereGeometry args={[size * 1.08, 32, 32]} />
           <meshBasicMaterial color={color} transparent opacity={0.12} />

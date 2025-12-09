@@ -19,9 +19,13 @@ export default function Origina() {
             <div className="origina-text">
               <h2 className="origina-title">Origina — Sobre mí</h2>
               <p className="origina-subtitle">
-                Soy Laura Díaz Mondéjar (24/08/2004), de Miguelturra. Estudiante de último año
+                Soy Laura Díaz Mondéjar, de Miguelturra. Estudiante de último año
                 del Grado en Ingeniería Informática en la Escuela Superior de Informática de
                 Ciudad Real. Pertenezco a la intensificación en Tecnologías de la Información.
+
+                <br />
+                Mi pasión por la tecnología ha guiado mi formación como ingeniera. Tengo interés en el ciclo completo del desarrollo: desde la creatividad del Frontend y la solidez del Backend, hasta la protección crítica de la Ciberseguridad. Mi objetivo es aportar no solo mis conocimientos técnicos, sino también mi energía, compromiso y capacidad de superación. 
+
                 <br />
                 <em className="origina-motto">En este planeta empieza todo: aquí arranca mi universo digital, el Sistema Lauralis.</em>
               </p>

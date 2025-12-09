@@ -51,15 +51,6 @@
     "info": "Proyectos de la carrera"
   },
   {
-    "name": "Nova",
-    "color": "#9d6ff2",
-    "size": 1.5,
-    "orbit": 9,
-    "material": "crystal",
-    "metalness": 0.4,
-    "roughness": 0.05
-  },
-  {
     "name": "Cirrus",
     "color": "#f0f0f0",
     "size": 1.3,

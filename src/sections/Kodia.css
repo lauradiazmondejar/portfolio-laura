@@ -15,40 +15,25 @@
 .kodia-subtitle { margin:0 0 12px; color:#ccd0d7; }
 .kodia-divider { height:1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity:.45; border-radius:999px; }
 
-.kodia-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:22px; }
-.kodia-card { background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:14px; box-shadow: 0 6px 22px rgba(0,0,0,0.28); }
-.kodia-card h3 { margin:0 0 8px; color:#eaf9fb; font-weight:600; }
+.kodia-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap:24px; row-gap:36px; margin-top:30px; }
+.kodia-card { background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:14px; box-shadow: 0 6px 22px rgba(0,0,0,0.28); display:flex; flex-direction:column; gap:10px; min-height:100%; }
+.kodia-card h3 { margin:0; color:#eaf9fb; font-weight:600; font-size:17px; }
 
-/* Badges */
-.kd-badges { display:flex; flex-wrap:wrap; gap:8px; }
-.kd-badge { display:inline-flex; align-items:center; justify-content:center; padding:6px 10px; border-radius:999px; font-weight:600; font-size:12px; backdrop-filter: blur(2px); border:1px solid rgba(255,255,255,0.08); }
-
-/* Icon grids */
-.kd-icons { display:flex; flex-wrap:wrap; gap:16px; align-items: center; }
-.kd-icon { width:120px; height:120px; display:grid; place-items:center; border-radius:16px; background: #ffffff; border:1px solid #e5e8ec; box-shadow: 0 8px 24px rgba(0,0,0,0.22); position: relative; }
-.kd-icon img { width:72px; height:72px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25)); }
-.kd-icon:hover { transform: translateY(-1px); border-color: #cfd6de; }
-/* Tooltip */
-.kd-icon::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(0); background: rgba(8,10,16,0.92); color: #eaf9fb; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 1; white-space: nowrap; pointer-events: none; opacity: 0; border: 1px solid rgba(0,200,215,0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: opacity .15s ease, transform .15s ease; }
-.kd-icon:hover::after { opacity: 1; transform: translateX(-50%) translateY(-2px); }
-
-/* Tools */
-.kd-tools { display:flex; gap:12px; flex-wrap:wrap; }
-.kd-tool-link { text-decoration:none; color:#e6f7f9; }
-.kd-tool { display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; background: rgba(255,255,255,0.03); }
-.kd-tool .icon { display:grid; place-items:center; width:28px; height:28px; border-radius:8px; background: rgba(0,200,215,0.14); border:1px solid rgba(0,200,215,0.35); }
-.kd-tool .txt { font-weight:500; }
-
-/* Projects */
-.kd-projects { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
-.kd-project { border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:10px 12px; background: rgba(255,255,255,0.03); }
-.kd-project .kp-title { color:#eaf9fb; font-weight:600; }
-.kd-project .kp-desc { color:#d0e9ed; font-size:14px; margin:4px 0 6px; }
-.kd-project .kp-link { color:#a8f6ff; text-decoration:none; border-bottom:1px dashed rgba(168,246,255,0.55); }
-.kd-project .kp-link:hover { color:#e6ffff; border-bottom-color:#e6ffff; }
+.kd-tech-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); gap:10px; }
+.kd-tech { position:relative; display:flex; justify-content:flex-start; align-items:center; padding:6px 4px; border: none; border-radius:10px; background: transparent; }
+.kd-tech-icon { width:56px; height:56px; border-radius:12px; background: #ffffff; border:1px solid rgba(0,0,0,0.12); display:grid; place-items:center; position:relative; overflow:hidden; }
+.kd-tech-icon.has-logo img { display:block; }
+.kd-tech-icon img { width:80%; height:80%; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.22)); }
+.kd-tech-letter { position:absolute; inset:0; display:grid; place-items:center; font-weight:700; color:#0b0d17; background: rgba(0,200,215,0.18); border-radius:10px; opacity:0; }
+.kd-tech-icon--fallback .kd-tech-letter { opacity:1; }
+.kd-tech::after { content: attr(data-tip); position:absolute; bottom: calc(100% + 8px); left:50%; transform: translateX(-50%) translateY(4px); background: rgba(8,10,16,0.92); color:#eaf9fb; padding:6px 10px; border-radius:8px; font-size:13px; line-height:1; white-space: nowrap; pointer-events: none; opacity: 0; border: 1px solid rgba(0,200,215,0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: opacity .15s ease, transform .15s ease; }
+.kd-tech:hover::after { opacity:1; transform: translateX(-50%) translateY(0); }
 
 /* Background */
 .kodia-aurora { position:absolute; right:-12%; top:-8%; width:140%; height:120%; background: radial-gradient(60% 50% at 82% 8%, rgba(0,200,215,0.08), transparent 60%), conic-gradient(from 200deg at 20% 20%, rgba(0,200,215,0.06), transparent 30%); transform: rotate(2deg); filter: blur(6px); pointer-events:none; z-index:0; }
 .kodia-stars { position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.38; background-image: radial-gradient(1px 1px at 14% 18%, rgba(255,255,255,0.32) 50%, transparent 51%), radial-gradient(1px 1px at 86% 26%, rgba(255,255,255,0.28) 50%, transparent 51%), radial-gradient(1px 1px at 28% 68%, rgba(255,255,255,0.22) 50%, transparent 51%), radial-gradient(1px 1px at 60% 52%, rgba(255,255,255,0.22) 50%, transparent 51%); }
 
-@media (max-width: 920px) { .kodia-grid { grid-template-columns: 1fr; } }
+@media (max-width: 920px) {
+  .kodia-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .kd-tech-list { grid-template-columns: repeat(auto-fit, minmax(58px, 1fr)); }
+}

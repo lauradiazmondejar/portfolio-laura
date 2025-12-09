@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import "./Cirrus.css";
 
 const skills = [
-  { name: "Comunicación", value: 75 },
-  { name: "Trabajo en equipo", value: 80 },
-  { name: "Organización", value: 90 },
-  { name: "Responsabilidad", value: 95 },
-  { name: "Resolución de problemas", value: 85 },
-  { name: "Aprendizaje rápido", value: 90 },
+  { id: "adaptabilidad", name: "Adaptabilidad y aprendizaje agil", img: "sokoban.png" },
+  { id: "comunicacion", name: "Comunicacion asertiva", img: "victini.png" },
+  { id: "analitico", name: "Pensamiento analitico", img: "remotetypes.png" },
+  { id: "tiempo", name: "Gestion del tiempo", img: "alfatrip.png" },
+  { id: "equipo", name: "Trabajo en equipo", img: "geoparque.png" },
 ];
 
 export default function Cirrus() {
@@ -22,29 +21,35 @@ export default function Cirrus() {
           className="cirrus-header"
         >
           <span className="cirrus-chip">Planeta blanco</span>
-          <h2 className="cirrus-title">Cirrus — Soft Skills</h2>
-          <p className="cirrus-subtitle">Aquí te muestro mis habilidades interpersonales.</p>
+          <h2 className="cirrus-title">Cirrus - Soft Skills</h2>
+          <p className="cirrus-subtitle">Un cielo de habilidades: cada estrella representa una fortaleza.</p>
           <div className="cirrus-divider" />
         </motion.div>
 
         <div className="cirrus-grid">
           {skills.map((s, i) => (
-            <motion.div
-              key={s.name}
-              className="skill-row"
-              initial={{ opacity: 0, y: 10 }}
+            <motion.article
+              key={s.id}
+              className="cirrus-card"
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.45, delay: i * 0.05 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, delay: 0.05 * i }}
             >
-              <div className="skill-head">
-                <span className="skill-name">{s.name}</span>
-                <span className="skill-value">{s.value}%</span>
+              <div className="cirrus-card-media">
+                <img
+                  src={`${import.meta.env.BASE_URL}proyectos/${s.img}`}
+                  alt={s.name}
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
               </div>
-              <div className="bar">
-                <div className="bar-fill" style={{ width: `${s.value}%` }} />
+              <div className="cirrus-card-body">
+                <h3>{s.name}</h3>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
@@ -54,4 +59,3 @@ export default function Cirrus() {
     </section>
   );
 }
-
