@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { motion } from "framer-motion";
 import "./Synthia.css";
 
@@ -100,8 +100,8 @@ const proyectos = [
     title: "Gramola",
     description: "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
     img: "placeholder.png",
-    href: "https://github.com/lauradiazmondejar/Gramola.git",
-    github: "https://github.com/lauradiazmondejar/Gramola.git",
+    href: "",
+    github: "",
     tech: ["Java", "Spring Boot", "TypeScript", "Angular", "MySQL", "Selenium", "VSCode"],
   },
 ];
