@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import "./Kodia.css";
 
 function TechItem({ name, logo }) {
@@ -29,66 +29,69 @@ export default function Kodia() {
     {
       title: "Lenguajes de programacion",
       items: [
-        { name: "Java", logo: "java.png" },
         { name: "Python", logo: "python.png" },
-        { name: "C" },
-        { name: "C#" },
+        { name: "Java", logo: "java.png" },
+        { name: "C", logo: "c.png" },
+        { name: "C#", logo: "csharp.png" },
         { name: "JavaScript", logo: "javascript.png" },
-        { name: "TypeScript" },
-        { name: "Dart" },
+        { name: "UML", logo: "uml.png" },
+        { name: "TypeScript", logo: "typescript.png" },
+        { name: "Dart", logo: "dart.png" },
       ],
     },
     {
       title: "Desarrollo web",
       items: [
-        { name: "Angular" },
-        { name: "Spring Boot" },
+        { name: "Angular", logo: "angular.png" },
+        { name: "Spring Boot", logo: "springboot.png" },
+        { name: "Microservicios", logo: "microservicios.png" },
+        { name: "APIs REST", logo: "apisrest.png" },
         { name: "HTML5", logo: "html.png" },
         { name: "CSS3", logo: "css.png" },
-        { name: "WordPress" },
-        { name: "APIs REST" },
-        { name: "Microservicios" },
+        { name: "WordPress", logo: "wordpress.png" },
       ],
     },
     {
       title: "Desarrollo de aplicaciones",
       items: [
-        { name: "Flutter" },
-        { name: "React Native" },
-        { name: "Android Studio" },
+        { name: "Flutter", logo: "flutter.png" },
+        { name: "React Native", logo: "reactnative.png" },
+        { name: "Android Studio", logo: "androidstudio.png" },
       ],
     },
     {
       title: "Bases de datos",
       items: [
-        { name: "MySQL" },
-        { name: "Oracle SQL" },
-        { name: "PostgreSQL" },
+        { name: "MySQL", logo: "mysql.png" },
+        { name: "Oracle SQL", logo: "oraclesql.png" },
+        { name: "PostgreSQL", logo: "postgresql.png" },
       ],
     },
     {
       title: "Herramientas de desarrollo",
       items: [
         { name: "Git", logo: "git.png" },
-        { name: "Docker" },
-        { name: "Visual Studio", logo: "visualstudio.png" },
         { name: "VS Code", logo: "visualstudiocode.png" },
+        { name: "Visual Studio", logo: "visualstudio.png" },
         { name: "Eclipse", logo: "eclipse.png" },
-        { name: "Visual Paradigm" },
+        { name: "Visual Paradigm", logo: "visualparadigm.png" },
+        { name: "Bizagi", logo: "bizagi.png" },
       ],
     },
     {
       title: "Sistemas, redes y seguridad",
       items: [
-        { name: "Metasploit Framework" },
-        { name: "Cisco Packet Tracer" },
-        { name: "Oracle VirtualBox" },
+        { name: "Docker", logo: "docker.png" },
+        { name: "Metasploit Framework", logo: "metasploitframework.png" },
+        { name: "Cisco Packet Tracer", logo: "ciscopackettracer.png" },
+        { name: "Oracle VirtualBox", logo: "oraclevirtualbox.png" },
+        { name: "Wireshark", logo: "wireshark.png" },
       ],
     },
     {
       title: "Gestion de proyectos",
       items: [
-        { name: "Microsoft Project" },
+        { name: "Microsoft Project", logo: "microsoftproject.png" },
       ],
     },
   ];
@@ -104,8 +107,8 @@ export default function Kodia() {
           className="kodia-header"
         >
           <span className="kodia-chip">Planeta verde</span>
-          <h2 className="kodia-title">Kodia - Lenguajes y tecnologias</h2>
-          <p className="kodia-subtitle">Stacks agrupados por foco: backend, frontend, apps, datos y herramientas.</p>
+          <h2 className="kodia-title">Kodia - Competencias digitales</h2>
+          <p className="kodia-subtitle">Aquí te muestro los lenguajes y tecnologías con los que he trabajado.</p>
           <div className="kodia-divider" />
         </motion.div>
 

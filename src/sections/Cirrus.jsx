@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import "./Cirrus.css";
 
 const skills = [
-  { id: "adaptabilidad", name: "Adaptabilidad y aprendizaje agil", img: "sokoban.png" },
-  { id: "comunicacion", name: "Comunicacion asertiva", img: "victini.png" },
-  { id: "analitico", name: "Pensamiento analitico", img: "remotetypes.png" },
-  { id: "tiempo", name: "Gestion del tiempo", img: "alfatrip.png" },
-  { id: "equipo", name: "Trabajo en equipo", img: "geoparque.png" },
+  { id: "adaptabilidad", name: "Adaptabilidad y aprendizaje agil", img: "adaptabildad.png" },
+  { id: "comunicacion", name: "Comunicacion asertiva", img: "comunicacion.png" },
+  { id: "analitico", name: "Pensamiento analitico", img: "pensamiento.png" },
+  { id: "tiempo", name: "Gestion del tiempo", img: "tiempo.png" },
+  { id: "equipo", name: "Trabajo en equipo", img: "equipo.png" },
 ];
 
 export default function Cirrus() {
@@ -38,7 +38,7 @@ export default function Cirrus() {
             >
               <div className="cirrus-card-media">
                 <img
-                  src={`${import.meta.env.BASE_URL}proyectos/${s.img}`}
+                  src={`${import.meta.env.BASE_URL}soft skills/${s.img}`}
                   alt={s.name}
                   loading="lazy"
                   onError={(e) => {
