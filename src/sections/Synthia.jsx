@@ -1,39 +1,29 @@
-import { useRef, useState } from "react";
+﻿import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Synthia.css";
 
 const proyectos = [
   {
-    id: "sokoban",
-    title: "Sokoban",
+    id: "palettefit",
+    title: "PaletteFit",
     description:
-      "Implementacion del juego Sokoban que calcula la secuencia de movimientos desde cualquier nivel valido usando estrategias de busqueda de Sistemas Inteligentes.",
-    img: "sokoban.png",
-    images: ["sokoban/NIVEL.png", "sokoban/BFS.png", "sokoban/AESTRELLA.png"],
-    href: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
-    github: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
-    tech: ["Java", "Heuristicas", "Busqueda", "VSCode"],
+      "App movil multimedia para combinar ropa con analisis de color. Armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
+    videos: ["palettefit/palettefit.mp4"],
+    img: "placeholder.png",
+    href: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
+    github: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
+    tech: ["Dart", "Flutter", "Android Studio"],
   },
   {
-    id: "victini",
-    title: "IPOkemon",
+    id: "cve-2023-0386",
+    title: "PoC CVE-2023-0386",
     description:
-      "Aplicacion de escritorio para interactuar con Victini, mostrando estados y acciones. Proyecto de Interaccion Persona-Ordenador II.",
-    img: "victini.png",
-    videos: ["IPOkemon/VictiniLDM.mp4"],
-    href: "https://github.com/lauradiazmondejar/VictiniLDM.git",
-    github: "https://github.com/lauradiazmondejar/VictiniLDM.git",
-    tech: ["C#", "Visual Studio", "UI"],
-  },
-  {
-    id: "remotetypes",
-    title: "RemoteTypes",
-    description:
-      "Servicio para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
-    img: "remotetypes.png",
-    href: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
-    github: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
-    tech: ["Python", "ZeroC Ice", "Kafka", "Docker", "VSCode", "Ubuntu"],
+      "Escalada local de privilegios en Ubuntu 22.04 explotando OverlayFS (CVE-2023-0386). Trabajo de Seguridad en Sistemas Informaticos.",
+    videos: ["poc/demo.mp4"],
+    img: "placeholder.png",
+    href: `${import.meta.env.BASE_URL}proyectos/poc/poc.pdf`,
+    github: "",
+    tech: ["Linux", "Ubuntu", "Metasploit Framework"],
   },
   {
     id: "alfatrip",
@@ -56,6 +46,27 @@ const proyectos = [
     tech: ["HTML", "CSS", "Python", "Microservicios", "APIs", "Docker", "PostgreSQL", "VSCode"],
   },
   {
+    id: "gsi",
+    title: "Gmail Security Interface (GSI)",
+    description:
+      "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
+    images: ["GSI/gsi1.png", "GSI/gsi2.png", "GSI/gsi3.png", "GSI/gsi4.png", "GSI/gsi5.png", "GSI/gsi6.png", "GSI/gsi7.png", "GSI/gsi8.png"],
+    href: "https://github.com/Jsesm/gsi.git",
+    github: "https://github.com/Jsesm/gsi.git",
+    tech: ["Python", "Flask", "HTML", "CSS", "Ubuntu", "VSCode"],
+  },
+  {
+    id: "victini",
+    title: "IPOkemon",
+    description:
+      "Aplicacion de escritorio para interactuar con Victini, mostrando estados y acciones. Proyecto de Interaccion Persona-Ordenador II.",
+    img: "victini.png",
+    videos: ["IPOkemon/VictiniLDM.mp4"],
+    href: "https://github.com/lauradiazmondejar/VictiniLDM.git",
+    github: "https://github.com/lauradiazmondejar/VictiniLDM.git",
+    tech: ["C#", "Visual Studio", "UI"],
+  },
+  {
     id: "geoparque",
     title: "Geoparque ESIstencial",
     description:
@@ -67,54 +78,55 @@ const proyectos = [
     tech: ["Dart", "Flutter", "Android Studio"],
   },
   {
-    id: "gsi",
-    title: "Gmail Security Interface (GSI)",
+    id: "remotetypes",
+    title: "RemoteTypes",
     description:
-      "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
-    images: ["GSI/gsi1.png", "GSI/gsi2.png", "GSI/gsi3.png", "GSI/gsi4.png", "GSI/gsi5.png", "GSI/gsi6.png", "GSI/gsi7.png", "GSI/gsi8.png"],
-    href: "https://github.com/Jsesm/gsi.git",
-    github: "https://github.com/Jsesm/gsi.git",
-    tech: ["Python", "Flask", "HTML", "CSS", "Ubuntu", "VSCode"],
+      "Servicio para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
+    images: ["remotetypes/remotetypes1.png", "remotetypes/remotetypes2.png"],
+    href: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
+    github: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
+    tech: ["Python", "ZeroC Ice", "Kafka", "Docker", "VSCode", "Ubuntu"],
+  },
+  {
+    id: "sokoban",
+    title: "Sokoban",
+    description:
+      "Implementacion del juego Sokoban que calcula la secuencia de movimientos desde cualquier nivel valido usando estrategias de busqueda de Sistemas Inteligentes.",
+    img: "sokoban.png",
+    images: ["sokoban/NIVEL.png", "sokoban/BFS.png", "sokoban/AESTRELLA.png"],
+    href: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
+    github: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
+    tech: ["Java", "Heuristicas", "Busqueda", "VSCode"],
   },
   {
     id: "iso24",
     title: "ISO24",
     description:
       "Proyecto de Ingenieria del Software II: planificacion, requisitos, casos de uso y arquitectura cliente-servidor para cinco roles.",
-    img: "placeholder.png",
+    images: ["iso/iso1.png", "iso/iso2.png", "iso/iso3.png", "iso/iso4.png"],
     href: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
     github: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
     tech: ["Git", "Visual Paradigm", "Gestion de proyectos", "Analisis de requisitos", "Agile"],
-  },
-  {
-    id: "palettefit",
-    title: "PaletteFit",
-    description:
-      "App movil multimedia para combinar ropa con analisis de color. Armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
-    img: "placeholder.png",
-    href: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
-    github: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
-    tech: ["Dart", "Flutter", "Android Studio"],
-  },
-  {
-    id: "cve-2023-0386",
-    title: "PoC CVE-2023-0386",
-    description:
-      "Escalada local de privilegios en Ubuntu 22.04 explotando OverlayFS (CVE-2023-0386). Trabajo de Seguridad en Sistemas Informaticos.",
-    img: "placeholder.png",
-    href: "#",
-    github: "",
-    tech: ["Linux", "Ubuntu", "Metasploit Framework"],
   },
   {
     id: "gramola",
     title: "Gramola",
     description:
       "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
-    img: "placeholder.png",
+    img: "gramola/comigsoon.png",
     href: "",
     github: "",
     tech: ["Java", "Spring Boot", "TypeScript", "Angular", "MySQL", "Selenium", "VSCode"],
+  },
+  {
+    id: "iker",
+    title: "Asociación IKER",
+    description:
+      "Proyecto en preparación para la Asociación IKER. Próximamente más detalles e imágenes.",
+    img: "gramola/comigsoon.png",
+    href: "",
+    github: "",
+    tech: ["En progreso"],
   },
 ];
 

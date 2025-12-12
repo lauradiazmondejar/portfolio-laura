@@ -4,12 +4,6 @@ import "./Logika.css";
 export default function Logika() {
   const items = [
     {
-      title: "Educación Secundaria Obligatoria",
-      place: "IES Campo de Calatrava (Miguelturra)",
-      period: "sep 2016 — may 2020",
-      details: "",
-    },
-    {
       title: "Bachillerato",
       place: "IES Campo de Calatrava (Miguelturra)",
       period: "sep 2020 — may 2022",
