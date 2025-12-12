@@ -7,6 +7,7 @@ import Praxis from "./sections/Praxis";
 import Kodia from "./sections/Kodia";
 import Synthia from "./sections/Synthia";
 import Cirrus from "./sections/Cirrus";
+import Footer from "./sections/Footer";
 import "./Hero.css";
 
 export default function App() {
@@ -93,6 +94,7 @@ export default function App() {
         <Kodia />
         <Synthia />
         <Cirrus />
+        <Footer />
         {/* SecciÃ³n de los planetas */}
         
 
@@ -111,8 +113,6 @@ export default function App() {
     </div>
   );
 }
-
-
 
 
 

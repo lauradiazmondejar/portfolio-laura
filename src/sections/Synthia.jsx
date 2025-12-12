@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Synthia.css";
 
@@ -6,7 +6,8 @@ const proyectos = [
   {
     id: "sokoban",
     title: "Sokoban",
-    description: "Implementacion del juego Sokoban que consigue la secuencia de movimientos desde cualquier nivel valido del tablero hasta su solucion empleando estrategias de busqueda estudiadas en Sistemas Inteligentes.",
+    description:
+      "Implementacion del juego Sokoban que calcula la secuencia de movimientos desde cualquier nivel valido usando estrategias de busqueda de Sistemas Inteligentes.",
     img: "sokoban.png",
     images: ["sokoban/NIVEL.png", "sokoban/BFS.png", "sokoban/AESTRELLA.png"],
     href: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
@@ -16,8 +17,10 @@ const proyectos = [
   {
     id: "victini",
     title: "IPOkemon",
-    description: "Aplicacion de escritorio para interactuar con un Pokemon (Victini), mostrando estados y acciones. Proyecto de la asignatura de Interaccion Persona-Ordenador II.",
+    description:
+      "Aplicacion de escritorio para interactuar con Victini, mostrando estados y acciones. Proyecto de Interaccion Persona-Ordenador II.",
     img: "victini.png",
+    videos: ["IPOkemon/VictiniLDM.mp4"],
     href: "https://github.com/lauradiazmondejar/VictiniLDM.git",
     github: "https://github.com/lauradiazmondejar/VictiniLDM.git",
     tech: ["C#", "Visual Studio", "UI"],
@@ -25,7 +28,8 @@ const proyectos = [
   {
     id: "remotetypes",
     title: "RemoteTypes",
-    description: "Servicio de almacenamiento para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
+    description:
+      "Servicio para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
     img: "remotetypes.png",
     href: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
     github: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
@@ -34,7 +38,8 @@ const proyectos = [
   {
     id: "alfatrip",
     title: "AlfaTrip",
-    description: "Plataforma web para planificar viajes integrando APIs (Google Flights, Hotels, OpenStreetMap). Proyecto en equipo para Integracion de Sistemas Informaticos.",
+    description:
+      "Plataforma web para planificar viajes integrando APIs (Flights, Hotels, OpenStreetMap). Proyecto en equipo para Integracion de Sistemas Informaticos.",
     img: "alfatrip.png",
     images: [
       "alfatrip/alfatrip1.png",
@@ -53,8 +58,10 @@ const proyectos = [
   {
     id: "geoparque",
     title: "Geoparque ESIstencial",
-    description: "Prototipo de alta fidelidad para una app movil educativa con rutas y participacion ciudadana. Proyecto de Interaccion Persona-Ordenador II.",
+    description:
+      "Prototipo de alta fidelidad para una app educativa con rutas y participacion ciudadana. Proyecto de Interaccion Persona-Ordenador II.",
     img: "geoparque.png",
+    videos: ["geoparque_esistencial/app.mp4"],
     href: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
     github: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
     tech: ["Dart", "Flutter", "Android Studio"],
@@ -62,8 +69,9 @@ const proyectos = [
   {
     id: "gsi",
     title: "Gmail Security Interface (GSI)",
-    description: "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
-    img: "placeholder.png",
+    description:
+      "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
+    images: ["GSI/gsi1.png", "GSI/gsi2.png", "GSI/gsi3.png", "GSI/gsi4.png", "GSI/gsi5.png", "GSI/gsi6.png", "GSI/gsi7.png", "GSI/gsi8.png"],
     href: "https://github.com/Jsesm/gsi.git",
     github: "https://github.com/Jsesm/gsi.git",
     tech: ["Python", "Flask", "HTML", "CSS", "Ubuntu", "VSCode"],
@@ -71,7 +79,8 @@ const proyectos = [
   {
     id: "iso24",
     title: "ISO24",
-    description: "Proyecto de Ingenieria del Software II: planificacion, requisitos, casos de uso y arquitectura cliente-servidor para cinco roles de usuario.",
+    description:
+      "Proyecto de Ingenieria del Software II: planificacion, requisitos, casos de uso y arquitectura cliente-servidor para cinco roles.",
     img: "placeholder.png",
     href: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
     github: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
@@ -80,7 +89,8 @@ const proyectos = [
   {
     id: "palettefit",
     title: "PaletteFit",
-    description: "App movil multimedia para combinar ropa con analisis de color. Incluye armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
+    description:
+      "App movil multimedia para combinar ropa con analisis de color. Armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
     img: "placeholder.png",
     href: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
     github: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
@@ -89,7 +99,8 @@ const proyectos = [
   {
     id: "cve-2023-0386",
     title: "PoC CVE-2023-0386",
-    description: "Escalada local de privilegios en Ubuntu 22.04 explotando la vulnerabilidad OverlayFS (CVE-2023-0386). Trabajo de Seguridad en Sistemas Informaticos.",
+    description:
+      "Escalada local de privilegios en Ubuntu 22.04 explotando OverlayFS (CVE-2023-0386). Trabajo de Seguridad en Sistemas Informaticos.",
     img: "placeholder.png",
     href: "#",
     github: "",
@@ -98,7 +109,8 @@ const proyectos = [
   {
     id: "gramola",
     title: "Gramola",
-    description: "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
+    description:
+      "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
     img: "placeholder.png",
     href: "",
     github: "",
@@ -107,15 +119,23 @@ const proyectos = [
 ];
 
 export default function Synthia() {
+  const videoRefs = useRef({});
+  const lightboxVideoRef = useRef(null);
+  const videoTimesRef = useRef({});
   const [slides, setSlides] = useState(() => {
     const initial = {};
     proyectos.forEach((p) => {
       if (Array.isArray(p.images) && p.images.length > 0) initial[p.id] = 0;
+      if (Array.isArray(p.videos) && p.videos.length > 0) initial[p.id] = 0;
     });
     return initial;
   });
 
   const [fullscreen, setFullscreen] = useState(null);
+  const getVideoTime = (id) => videoTimesRef.current[id] ?? 0;
+  const setVideoTime = (id, time) => {
+    videoTimesRef.current[id] = time;
+  };
 
   const changeSlide = (id, total, direction) => {
     setSlides((prev) => {
@@ -130,12 +150,25 @@ export default function Synthia() {
     });
   };
 
-  const handleSlide = (id, total, direction) => {
-    setSlides((prev) => {
-      const current = prev[id] ?? 0;
-      const next = (current + direction + total) % total;
-      return { ...prev, [id]: next };
-    });
+  const openVideoFullscreen = (projectId, index) => {
+    const vid = videoRefs.current[projectId];
+    const currentTime = vid ? vid.currentTime : 0;
+    if (vid) vid.pause();
+    setFullscreen({ id: projectId, index, kind: "video", startTime: currentTime });
+  };
+
+  const closeFullscreen = () => {
+    if (fullscreen?.kind === "video") {
+      const lbVid = lightboxVideoRef.current;
+      const time = lbVid ? lbVid.currentTime : 0;
+      setVideoTime(fullscreen.id, time);
+      const cardVid = videoRefs.current[fullscreen.id];
+      if (cardVid) {
+        cardVid.currentTime = time;
+        cardVid.pause();
+      }
+    }
+    setFullscreen(null);
   };
 
   return (
@@ -159,10 +192,13 @@ export default function Synthia() {
           {proyectos.map((p, index) => {
             const repoLink = p.href || p.github || "#";
             const hasCarousel = Array.isArray(p.images) && p.images.length > 0;
-            const totalImages = hasCarousel ? p.images.length : 1;
-            const activeIndex = hasCarousel ? slides[p.id] ?? 0 : 0;
+            const hasVideo = Array.isArray(p.videos) && p.videos.length > 0;
+            const totalItems = hasCarousel ? p.images.length : hasVideo ? p.videos.length : 1;
+            const activeIndex = (slides[p.id] ?? 0) % totalItems;
             const mediaSrc = hasCarousel
               ? `${import.meta.env.BASE_URL}proyectos/${p.images[activeIndex]}`
+              : hasVideo
+              ? `${import.meta.env.BASE_URL}proyectos/${p.videos[activeIndex]}`
               : `${import.meta.env.BASE_URL}proyectos/${p.img}`;
 
             return (
@@ -175,50 +211,78 @@ export default function Synthia() {
                 transition={{ duration: 0.45, delay: 0.05 * index }}
               >
                 <div className={`synthia-card-media ${hasCarousel ? "has-carousel" : ""}`}>
-                  <img
-                    src={mediaSrc}
-                    alt={p.title}
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
+                  {hasVideo ? (
+                    <video
+                      controls
+                      src={mediaSrc}
+                      playsInline
+                      onLoadedMetadata={(e) => {
+                        const t = getVideoTime(p.id);
+                        if (t) e.currentTarget.currentTime = t;
+                      }}
+                      onTimeUpdate={(e) => {
+                        setVideoTime(p.id, e.currentTarget.currentTime);
+                      }}
+                      ref={(el) => {
+                        if (el) videoRefs.current[p.id] = el;
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={mediaSrc}
+                      alt={p.title}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  )}
+
                   {hasCarousel ? (
                     <>
                       <button
                         type="button"
                         className="synthia-nav prev"
                         aria-label={`Anterior ${p.title}`}
-                        onClick={() => changeSlide(p.id, totalImages, -1)}
+                        onClick={() => changeSlide(p.id, totalItems, -1)}
                       >
-                        ‹
+                        {"‹"}
                       </button>
                       <button
                         type="button"
                         className="synthia-nav next"
                         aria-label={`Siguiente ${p.title}`}
-                        onClick={() => changeSlide(p.id, totalImages, 1)}
+                        onClick={() => changeSlide(p.id, totalItems, 1)}
                       >
-                        ›
+                        {"›"}
                       </button>
                       <div className="synthia-dots" aria-hidden="true">
                         {p.images.map((_, dotIdx) => (
-                          <span
-                            key={dotIdx}
-                            className={`synthia-dot ${dotIdx === activeIndex ? "active" : ""}`}
-                          />
+                          <span key={dotIdx} className={`synthia-dot ${dotIdx === activeIndex ? "active" : ""}`} />
                         ))}
                       </div>
                       <button
                         type="button"
                         className="synthia-fullscreen"
                         aria-label={`Maximizar ${p.title}`}
-                        onClick={() => setFullscreen({ id: p.id, index: activeIndex })}
+                        onClick={() => setFullscreen({ id: p.id, index: activeIndex, kind: "image" })}
                       >
-                        ⤢
+                        {"⤢"}
                       </button>
                     </>
                   ) : null}
+
+                  {!hasCarousel && hasVideo ? (
+                    <button
+                      type="button"
+                      className="synthia-fullscreen"
+                      aria-label={`Maximizar ${p.title}`}
+                      onClick={() => openVideoFullscreen(p.id, activeIndex)}
+                    >
+                      {"⤢"}
+                    </button>
+                  ) : null}
+
                   <span className="synthia-pill">Proyecto {index + 1}</span>
                 </div>
 
@@ -253,12 +317,7 @@ export default function Synthia() {
 
                   {repoLink ? (
                     <div className="synthia-actions">
-                      <a
-                        className="synthia-btn primary"
-                        href={repoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a className="synthia-btn primary" href={repoLink} target="_blank" rel="noopener noreferrer">
                         Ver proyecto
                       </a>
                     </div>
@@ -276,48 +335,113 @@ export default function Synthia() {
             type="button"
             className="synthia-lightbox-close"
             aria-label="Cerrar"
-            onClick={() => setFullscreen(null)}
+            onClick={closeFullscreen}
           >
             ×
           </button>
+
           {(() => {
             const current = proyectos.find((p) => p.id === fullscreen.id);
-            if (!current || !current.images || !current.images.length) return null;
-            const src = `${import.meta.env.BASE_URL}proyectos/${current.images[fullscreen.index]}`;
-            return (
-              <div className="synthia-lightbox-body">
-                <img src={src} alt={current.title} />
-                <div className="synthia-lightbox-dots">
-                  {current.images.map((_, i) => (
-                    <button
-                      key={i}
-                      className={`synthia-dot ${i === fullscreen.index ? "active" : ""}`}
-                      aria-label={`Ver imagen ${i + 1}`}
-                      onClick={() => {
-                        setFullscreen({ id: current.id, index: i });
-                        setSlides((prev) => ({ ...prev, [current.id]: i }));
-                      }}
-                    />
-                  ))}
+            if (!current) return null;
+
+            // Videos
+            if (fullscreen.kind === "video" && current.videos && current.videos.length) {
+              const total = current.videos.length;
+              const idx = fullscreen.index ?? 0;
+              const src = `${import.meta.env.BASE_URL}proyectos/${current.videos[idx]}`;
+
+              return (
+                <div className="synthia-lightbox-body">
+                  <video
+                    controls
+                    src={src}
+                    ref={lightboxVideoRef}
+                    onLoadedMetadata={(e) => {
+                      const start = fullscreen.startTime ?? getVideoTime(current.id) ?? 0;
+                      if (start) e.currentTarget.currentTime = start;
+                    }}
+                    onTimeUpdate={(e) => {
+                      setVideoTime(current.id, e.currentTarget.currentTime);
+                    }}
+                  />
+                  {total > 1 ? (
+                    <>
+                      <div className="synthia-lightbox-dots">
+                        {current.videos.map((_, i) => (
+                          <button
+                            key={i}
+                            className={`synthia-dot ${i === idx ? "active" : ""}`}
+                            aria-label={`Ver video ${i + 1}`}
+                            onClick={() => {
+                              setFullscreen({ id: current.id, index: i, kind: "video" });
+                              setSlides((prev) => ({ ...prev, [current.id]: i }));
+                            }}
+                          />
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        className="synthia-lightbox-nav prev"
+                        aria-label="Anterior"
+                        onClick={() => changeSlide(current.id, total, -1)}
+                      >
+                        {"‹"}
+                      </button>
+                      <button
+                        type="button"
+                        className="synthia-lightbox-nav next"
+                        aria-label="Siguiente"
+                        onClick={() => changeSlide(current.id, total, 1)}
+                      >
+                        {"›"}
+                      </button>
+                    </>
+                  ) : null}
                 </div>
-                <button
-                  type="button"
-                  className="synthia-lightbox-nav prev"
-                  aria-label="Anterior"
-                  onClick={() => changeSlide(current.id, current.images.length, -1)}
-                >
-                  ‹
-                </button>
-                <button
-                  type="button"
-                  className="synthia-lightbox-nav next"
-                  aria-label="Siguiente"
-                  onClick={() => changeSlide(current.id, current.images.length, 1)}
-                >
-                  ›
-                </button>
-              </div>
-            );
+              );
+            }
+
+            // Imagenes
+            if (current.images && current.images.length) {
+              const src = `${import.meta.env.BASE_URL}proyectos/${current.images[fullscreen.index]}`;
+
+              return (
+                <div className="synthia-lightbox-body">
+                  <img src={src} alt={current.title} />
+                  <div className="synthia-lightbox-dots">
+                    {current.images.map((_, i) => (
+                      <button
+                        key={i}
+                        className={`synthia-dot ${i === fullscreen.index ? "active" : ""}`}
+                        aria-label={`Ver imagen ${i + 1}`}
+                        onClick={() => {
+                          setFullscreen({ id: current.id, index: i, kind: "image" });
+                          setSlides((prev) => ({ ...prev, [current.id]: i }));
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    className="synthia-lightbox-nav prev"
+                    aria-label="Anterior"
+                    onClick={() => changeSlide(current.id, current.images.length, -1)}
+                  >
+                    {"‹"}
+                  </button>
+                  <button
+                    type="button"
+                    className="synthia-lightbox-nav next"
+                    aria-label="Siguiente"
+                    onClick={() => changeSlide(current.id, current.images.length, 1)}
+                  >
+                    {"›"}
+                  </button>
+                </div>
+              );
+            }
+
+            return null;
           })()}
         </div>
       ) : null}
