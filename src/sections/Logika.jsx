@@ -7,7 +7,7 @@ export default function Logika() {
       title: "Bachillerato",
       place: "IES Campo de Calatrava (Miguelturra)",
       period: "sep 2020 — may 2022",
-      details: "Itinerario científico.",
+      details: "Itinerario científico. Nota media: 9,71",
     },
     {
       title: "Grado en Ingeniería Informática",
@@ -30,7 +30,7 @@ export default function Logika() {
           <span className="logika-chip">Planeta azul</span>
           <h2 className="logika-title">Logika — Formación</h2>
           <p className="logika-subtitle">
-            Mi recorrido académico, de los fundamentos a la ingeniería.
+            Aquí te muestro mi formación académica y mis certificaciones, licencias y reconocimientos hasta la fecha.
           </p>
           <div className="logika-divider" />
         </motion.div>
@@ -62,30 +62,44 @@ export default function Logika() {
 
           {/* Certificaciones y licencias */}
           <div className="certs">
-            <h3 className="certs-title">Certificaciones y licencias</h3>
+            <h3 className="certs-title">Certificaciones, licencias y reconocimientos</h3>
             <ul className="certs-list">
               <li className="cert-card">
                 <div className="cert-dot" aria-hidden="true" />
                 <div className="cert-content">
-                  <div className="cert-title">FCE (B2) — Cambridge</div>
-                  <div className="cert-meta">Desde septiembre de 2020</div>
+                  <div className="cert-title">Programa de Retención de Talento Ciudad Real 2025</div>
+                  <div className="cert-meta">Diciembre 2025</div>
                 </div>
               </li>
               <li className="cert-card">
                 <div className="cert-dot" aria-hidden="true" />
                 <div className="cert-content">
-                  <div className="cert-title">Permiso B — DGT</div>
-                  <div className="cert-meta">Desde abril de 2025</div>
+                  <div className="cert-title">Segundo premio Digital Builders III - NTT DATA</div>
+                  <div className="cert-meta">Noviembre 2025</div>
                 </div>
               </li>
               <li className="cert-card">
                 <div className="cert-dot" aria-hidden="true" />
                 <div className="cert-content">
                   <div className="cert-title">Getting Started with Artificial Intelligence — IBM</div>
-                  <div className="cert-meta">Desde septiembre de 2025</div>
+                  <div className="cert-meta">Septiembre 2025</div>
                   <div className="cert-actions">
                     <a className="cred-btn" href="https://www.credly.com/badges/f507f3d3-aa8d-4125-8de9-5b59c9d8f30b/linked_in_profile" target="_blank" rel="noopener noreferrer">Ver credencial</a>
                   </div>
+                </div>
+              </li>
+              <li className="cert-card">
+                <div className="cert-dot" aria-hidden="true" />
+                <div className="cert-content">
+                  <div className="cert-title">Permiso B — DGT</div>
+                  <div className="cert-meta">Abril 2025</div>
+                </div>
+              </li>
+              <li className="cert-card">
+                <div className="cert-dot" aria-hidden="true" />
+                <div className="cert-content">
+                  <div className="cert-title">FCE (B2) — Cambridge</div>
+                  <div className="cert-meta">Septiembre 2020</div>
                 </div>
               </li>
             </ul>

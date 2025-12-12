@@ -7,12 +7,13 @@ const proyectos = [
     id: "palettefit",
     title: "PaletteFit",
     description:
-      "App movil multimedia para combinar ropa con analisis de color. Armario virtual, calendario de conjuntos, estadisticas y gamificacion.",
+      "App movil multimedia para combinar ropa con analisis de color. Armario virtual, filtrado de outfits, calendario de conjuntos, estadisticas y gamificacion. Retos diarios y generador mágico de outfits.",
     videos: ["palettefit/palettefit.mp4"],
     img: "placeholder.png",
     href: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
     github: "https://github.com/lauradiazmondejar/PaletteFit-Multimedia.git",
-    tech: ["Dart", "Flutter", "Android Studio"],
+    subject: "Multimedia",
+    tech: ["Dart", "Flutter", "Android", "Android Studio"],
   },
   {
     id: "cve-2023-0386",
@@ -23,6 +24,7 @@ const proyectos = [
     img: "placeholder.png",
     href: `${import.meta.env.BASE_URL}proyectos/poc/poc.pdf`,
     github: "",
+    subject: "Seguridad",
     tech: ["Linux", "Ubuntu", "Metasploit Framework"],
   },
   {
@@ -43,16 +45,18 @@ const proyectos = [
     ],
     href: "https://github.com/lauradiazmondejar/isi-alfatrip.git",
     github: "https://github.com/lauradiazmondejar/isi-alfatrip.git",
+    subject: "ISI",
     tech: ["HTML", "CSS", "Python", "Microservicios", "APIs", "Docker", "PostgreSQL", "VSCode"],
   },
   {
     id: "gsi",
     title: "Gmail Security Interface (GSI)",
     description:
-      "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contrasenas.",
+      "Herramienta de concienciacion en ciberseguridad para proteger frente a phishing y robo de credenciales. Analiza correos, redes WiFi y fortalece contraseñas. Desarrollada para Gestión de Sistemas de la Información.",
     images: ["GSI/gsi1.png", "GSI/gsi2.png", "GSI/gsi3.png", "GSI/gsi4.png", "GSI/gsi5.png", "GSI/gsi6.png", "GSI/gsi7.png", "GSI/gsi8.png"],
     href: "https://github.com/Jsesm/gsi.git",
     github: "https://github.com/Jsesm/gsi.git",
+    subject: "GSI",
     tech: ["Python", "Flask", "HTML", "CSS", "Ubuntu", "VSCode"],
   },
   {
@@ -64,38 +68,42 @@ const proyectos = [
     videos: ["IPOkemon/VictiniLDM.mp4"],
     href: "https://github.com/lauradiazmondejar/VictiniLDM.git",
     github: "https://github.com/lauradiazmondejar/VictiniLDM.git",
+    subject: "IPO II",
     tech: ["C#", "Visual Studio", "UI"],
   },
   {
     id: "geoparque",
     title: "Geoparque ESIstencial",
     description:
-      "Prototipo de alta fidelidad para una app educativa con rutas y participacion ciudadana. Proyecto de Interaccion Persona-Ordenador II.",
+      "Prototipo de alta fidelidad para una app de un geoparque con rutas y participacion ciudadana. Proyecto de Interaccion Persona-Ordenador II.",
     img: "geoparque.png",
     videos: ["geoparque_esistencial/app.mp4"],
     href: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
     github: "https://github.com/lauradiazmondejar/geoparque_esistencial.git",
+    subject: "IPO II",
     tech: ["Dart", "Flutter", "Android Studio"],
   },
   {
     id: "remotetypes",
     title: "RemoteTypes",
     description:
-      "Servicio para listas, conjuntos y diccionarios con persistencia y acceso interactivo. Trabajo de Sistemas Distribuidos.",
+      "Servicio para listas, conjuntos y diccionarios con persistencia. Trabajo de Sistemas Distribuidos.",
     images: ["remotetypes/remotetypes1.png", "remotetypes/remotetypes2.png"],
     href: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
     github: "https://github.com/lauradiazmondejar/LAURA-DIAZ-REMOTETYPES.git",
+    subject: "Sistemas Distribuidos",
     tech: ["Python", "ZeroC Ice", "Kafka", "Docker", "VSCode", "Ubuntu"],
   },
   {
     id: "sokoban",
     title: "Sokoban",
     description:
-      "Implementacion del juego Sokoban que calcula la secuencia de movimientos desde cualquier nivel valido usando estrategias de busqueda de Sistemas Inteligentes.",
+      "Implementacion del juego Sokoban que calcula la secuencia de movimientos hasta la solución desde cualquier nivel valido usando estrategias de busqueda de Sistemas Inteligentes.",
     img: "sokoban.png",
     images: ["sokoban/NIVEL.png", "sokoban/BFS.png", "sokoban/AESTRELLA.png"],
     href: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
     github: "https://github.com/lauradiazmondejar/sokoban-inteligentes.git",
+    subject: "Sistemas Inteligentes",
     tech: ["Java", "Heuristicas", "Busqueda", "VSCode"],
   },
   {
@@ -106,27 +114,30 @@ const proyectos = [
     images: ["iso/iso1.png", "iso/iso2.png", "iso/iso3.png", "iso/iso4.png"],
     href: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
     github: "https://github.com/aadriii03/-ISO24-ISO2-B04.git",
+    subject: "ISO II",
     tech: ["Git", "Visual Paradigm", "Gestion de proyectos", "Analisis de requisitos", "Agile"],
   },
   {
     id: "gramola",
     title: "Gramola",
     description:
-      "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y APIs musicales.",
+      "Aplicacion web full-stack para que los usuarios paguen y reproduzcan canciones en bares. Integra autenticacion, monetizacion y la API de Spotify.",
     img: "gramola/comigsoon.png",
     href: "",
     github: "",
+    subject: "Tecnologías y Sistemas Web",
     tech: ["Java", "Spring Boot", "TypeScript", "Angular", "MySQL", "Selenium", "VSCode"],
   },
   {
     id: "iker",
     title: "Asociación IKER",
     description:
-      "Proyecto en preparación para la Asociación IKER. Próximamente más detalles e imágenes.",
+      "Desarrollo de la página web de la Asociación IKER integrando RRSS y comercio electrónico.",
     img: "gramola/comigsoon.png",
     href: "",
     github: "",
-    tech: ["En progreso"],
+    subject: "Comercio electrónico",
+    tech: ["Wordpress", "WooCommerce", "XAMPP" ],
   },
 ];
 
@@ -202,7 +213,7 @@ export default function Synthia() {
 
         <div className="synthia-grid">
           {proyectos.map((p, index) => {
-            const repoLink = p.href || p.github || "#";
+            const repoLink = p.href || p.github;
             const hasCarousel = Array.isArray(p.images) && p.images.length > 0;
             const hasVideo = Array.isArray(p.videos) && p.videos.length > 0;
             const totalItems = hasCarousel ? p.images.length : hasVideo ? p.videos.length : 1;
@@ -295,7 +306,7 @@ export default function Synthia() {
                     </button>
                   ) : null}
 
-                  <span className="synthia-pill">Proyecto {index + 1}</span>
+                  <span className="synthia-pill">{p.subject || `Proyecto ${index + 1}`}</span>
                 </div>
 
                 <div className="synthia-card-body">

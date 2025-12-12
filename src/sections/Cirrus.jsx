@@ -22,7 +22,7 @@ export default function Cirrus() {
         >
           <span className="cirrus-chip">Planeta blanco</span>
           <h2 className="cirrus-title">Cirrus - Soft Skills</h2>
-          <p className="cirrus-subtitle">Un cielo de habilidades: cada estrella representa una fortaleza.</p>
+          <p className="cirrus-subtitle">Mi cielo de habilidades blandas</p>
           <div className="cirrus-divider" />
         </motion.div>
 

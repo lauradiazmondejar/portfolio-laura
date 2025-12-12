@@ -8,8 +8,8 @@ export default function Praxis() {
       title: "Becaria de colaboración — Escuela Superior de Informática (UCLM)",
       place: "Beca de colaboración en la gestión y desarrollo de los Programas Mentor Clásico y Mentor Profesional de la Escuela Superior de Informática de Ciudad Real.",
       details:
-        "Mis funciones principales fueron la gestión de los programas, la organización de eventos y la comunicación con estudiantes y mentores.",
-      skills: ["Microsoft Excel", "Gestión de programas"],
+        "Gestión y organización de los eventos y comunicación entre estudiantes y mentores.",
+      skills: ["Microsoft 365", "Gestión de programas"],
     },
     {
       period: "sep 2025 — nov 2025",
@@ -18,7 +18,7 @@ export default function Praxis() {
       place:
         "Prácticas extracurriculares del Grado en Ingeniería Informática.",
       details:
-        "Fui beneficiaria del Programa de Retención de Talento Ciudad Real 2025. Realicé prácticas en LULLAX SL como estudiante en prácticas, ayudando a mejorar la página web de la empresa y optimizando los marketplaces en los que se encuentran sus productos.",
+        "Optimización de marketplaces, diseño y mejoras UI/UX y expansión digital de la empresa en mercados internacionales.",
       skills: ["WordPress", "Bases de datos", "Marketplaces", "Control de versiones", "Comercio eletrónico"],
     },
   ];
@@ -35,7 +35,7 @@ export default function Praxis() {
         >
           <span className="praxis-chip">Planeta rojo</span>
           <h2 className="praxis-title">Praxis — Experiencia laboral</h2>
-          <p className="praxis-subtitle">Mi experiencia laboral reciente.</p>
+          <p className="praxis-subtitle">Esta sección muestra mi experiencia laboral y las funciones que desempeñé en cada puesto.</p>
           <div className="praxis-divider" />
         </motion.div>
 
