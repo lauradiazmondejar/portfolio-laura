@@ -1,5 +1,6 @@
-﻿import { useState, useEffect } from "react";
+﻿import { useState } from "react";
 import Universo from "./components/Universe";
+import TopNav from "./components/TopNav";
 import { motion } from "framer-motion";
 import Origina from "./sections/Origina";
 import Logika from "./sections/Logika";
@@ -13,20 +14,25 @@ import "./Hero.css";
 export default function App() {
   const [planetaSeleccionado, setPlanetaSeleccionado] = useState(null);
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const manejarClickPlaneta = (planeta) => {
     // Guardamos el planeta y forzamos el scroll inmediato
     setPlanetaSeleccionado(planeta);
     if (planeta?.name) {
-      const el = document.getElementById(planeta.name);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      scrollToSection(planeta.name);
     }
   };
 
 
   return (
     <div style={{ position: "relative", width: "100vw", height: "100vh", overflowY: "auto" }}>
+      <TopNav onNavigate={scrollToSection} />
       {/* ðŸŒ™ Foto + bocadillo alineados a la izquierda */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
@@ -34,7 +40,7 @@ export default function App() {
         transition={{ duration: 1 }}
         style={{
           position: "absolute",
-          top: "30px",
+          top: "76px",
           left: "40px",
           display: "flex",
           alignItems: "center",
@@ -61,7 +67,7 @@ export default function App() {
       </motion.div>
 
       {/* ðŸŒŒ Universo detrÃ¡s */}
-      <div className="universe-wrap">
+      <div id="Planetario" className="universe-wrap">
         <Universo onPlanetClick={manejarClickPlaneta} />
         {/* Fade inferior para suavizar la transición al contenido */}
         <div
@@ -113,12 +119,5 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
-
-
-
 
 
